@@ -1,0 +1,80 @@
+@font-face {
+    font-family: merriweather-regular;
+    src: url(fonts/Merriweather-Regular.ttf);
+}
+
+@font-face {
+    font-family: merriweather-lightitalic;
+    src: url(fonts/Merriweather-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: merriweather-light;
+    src: url(fonts/Merriweather-Light.ttf);
+}
+
+@font-face {
+    font-family: merriweather-italic;
+    src: url(fonts/Merriweather-Italic.ttf);
+}
+
+@font-face {
+    font-family: merriweather-bolditalic;
+    src: url(fonts/Merriweather-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: merriweather-bold;
+    src: url(fonts/Merriweather-Bold.ttf);
+}
+
+@font-face {
+    font-family: merriweather-blackitalic;
+    src: url(fonts/Merriweather-BlackItalic.ttf);
+}
+
+@font-face {
+    font-family: merriweather-black;
+    src: url(fonts/Merriweather-Black.ttf);
+}
+
+/* Default Settings*/
+* {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Variables */
+:root {
+    --body-background-color: #2c2f33;
+    --topnav-background-color: #23272a;
+
+    --merriweather-regular: mermerriweather-regular;
+    --merriweather-lightitalic: merriweather-lightitalic;
+    --merriweather-light: merriweather-light;
+    --merriweather-italic: merriweather-italic;
+    --merriweather-bolditalic: merriweather-bolditalic;
+    --merriweather-bold: merriweather-bold;
+    --merriweather-blackitalic: merriweather-blackitalic;
+    --merriweather-black: merriweather-black;
+}
+
+/* Body */
+body {
+    background-color: var(--body-background-color);
+
+    font-size: 100%;
+    font-family: var(--merriweather-blackitalic);
+}
+
+body .topnav {
+    background-color: var(--topnav-background-color);
+    overflow: hidden;
+}
+
+body .topnav .name {
+    font-size: 3vw;
+}
