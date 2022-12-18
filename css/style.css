@@ -45,6 +45,7 @@
     max-width: 100%;
     overflow: hidden;
     position: relative;
+    color: white;
 }
 
 /* Variables */
@@ -67,14 +68,72 @@ body {
     background-color: var(--body-background-color);
 
     font-size: 100%;
-    font-family: var(--merriweather-blackitalic);
 }
 
 body .topnav {
     background-color: var(--topnav-background-color);
-    overflow: hidden;
+    display: flex;
 }
 
-body .topnav .name {
-    font-size: 3vw;
+body .topnav a.name {
+    font-size: 40px;
+    font-family: var(--merriweather-bolditalic);
+    
+    align-self: center;
+
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    text-decoration: none;
 }
+
+body .topnav .topnav-content{
+    display: flex;
+
+    margin-left: auto;
+}
+
+body .topnav .topnav-content a {
+    font-size: 25px;
+    font-family: var(--merriweather-bold);
+
+    display: flex;
+
+    align-self: center;
+
+    text-decoration: none;
+
+    padding-right: 20px;
+}
+
+body .topnav .topnav-content a > i {
+    display:inline-block; 
+
+    align-self: center;
+
+    padding-right: 10px;
+}
+
+body .topnav .topnav-content a > span {
+    display:inline-block; 
+
+    width: 0;
+    white-space:nowrap; /* keep text one line */
+    direction:rtl;
+    pointer-events:none;
+
+    color: rgba(255,255,255,0);
+
+    align-self: center;
+
+    transition: transform .5s;
+    transform: translateX(-100%);
+}
+
+body .topnav .topnav-content a:hover span {
+    color: white;
+    width:100%;
+    transform: translateX(0);
+}
+
