@@ -43,7 +43,6 @@
     padding: 0;
     margin: 0;
     max-width: 100%;
-    overflow: hidden;
     position: relative;
     color: white;
 }
@@ -73,6 +72,7 @@ body {
 body .topnav {
     background-color: var(--topnav-background-color);
     display: flex;
+    overflow-y: auto;
 }
 
 body .topnav a.name {
@@ -91,6 +91,8 @@ body .topnav a.name {
 body .topnav .topnav-content{
     display: flex;
 
+    align-items: center;
+
     margin-left: auto;
 }
 
@@ -98,42 +100,98 @@ body .topnav .topnav-content a {
     font-size: 25px;
     font-family: var(--merriweather-bold);
 
-    display: flex;
-
-    align-self: center;
+    padding-right: 10px;
 
     text-decoration: none;
-
-    padding-right: 20px;
 }
 
-body .topnav .topnav-content a > i {
-    display:inline-block; 
+body .topnav .topnav-content a span {
+    margin-left: 0;
 
-    align-self: center;
+    padding-left: 5px;
 
-    padding-right: 10px;
+    transition: margin-left 0.5s;
+
+    
+    visibility: hidden;
 }
 
-body .topnav .topnav-content a > span {
-    display:inline-block; 
+body .topnav .topnav-content a #notes-text {
+    margin-left: -53.97px;
+}
 
-    width: 0;
-    white-space:nowrap; /* keep text one line */
-    direction:rtl;
-    pointer-events:none;
+body .topnav .topnav-content a #projects-text {
+    margin-left: -70.93px;
+}
 
-    color: rgba(255,255,255,0);
+#projects-bar {
+    position: absolute;
 
-    align-self: center;
+    top: 0;
+    bottom:0;
 
-    transition: transform .5s;
-    transform: translateX(-100%);
+    margin-top: auto;
+    margin-bottom: auto;
+
+    height: 24.8px;
+
+    /*102.18px - 31.25px*/
+
+    transition: transform 0.5s;
+}
+
+body .topnav .topnav-content a:hover #projects-bar {
+    transform:translateX(0);
+}
+
+#notes-bar {
+    position: absolute;
+
+    top: 0;
+    bottom:0;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    height: 25px;
+
+    /*72.72px - 18.75px*/
+
+    transition: transform 0.5s;
+}
+
+body .topnav .topnav-content a:hover #notes-bar {
+    transform:translateX(0);
+}
+
+body .topnav .topnav-content a:hover #notes-text {
+    margin-left: 18.75px;
+}
+
+body .topnav .topnav-content a:hover #projects-text {
+    margin-left: 31.25px;
 }
 
 body .topnav .topnav-content a:hover span {
-    color: white;
-    width:100%;
-    transform: translateX(0);
+    visibility: visible;
 }
 
+.homecontent {
+    margin: auto;
+    margin-top: 10px;
+    width: 90%;
+}
+
+.homecontent::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#aboutme {
+    float: left;
+    border-style: solid;
+    border-color: var(--topnav-background-color);
+    border-width: 5px;
+    padding: 10px;
+}
