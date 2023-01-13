@@ -45,12 +45,14 @@
     max-width: 100%;
     position: relative;
     color: white;
+    box-sizing: border-box;
 }
 
 /* Variables */
 :root {
     --body-background-color: #2c2f33;
     --topnav-background-color: #23272a;
+    --clickable-color: #add7e6;
 
     --merriweather-regular: mermerriweather-regular;
     --merriweather-lightitalic: merriweather-lightitalic;
@@ -72,126 +74,180 @@ body {
 body .topnav {
     background-color: var(--topnav-background-color);
     display: flex;
-    overflow-y: auto;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    z-index: 9;
+    width: 100%;
 }
 
 body .topnav a.name {
     font-size: 40px;
     font-family: var(--merriweather-bolditalic);
-    
-    align-self: center;
-
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
+    margin: auto auto auto 0;
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     text-decoration: none;
 }
 
 body .topnav .topnav-content{
-    display: flex;
-
-    align-items: center;
-
-    margin-left: auto;
+    margin: auto 0 auto auto;
 }
 
-body .topnav .topnav-content a {
-    font-size: 25px;
-    font-family: var(--merriweather-bold);
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 
-    padding-right: 10px;
-
+.icon-bar {
+    font-size: 30px;
     text-decoration: none;
+    padding-right: 25px;
 }
 
-body .topnav .topnav-content a span {
-    margin-left: 0;
+.front-titles {
+    font-family: var(--merriweather-bold);
+    text-align: center;
+    font-size: 45px;
 
-    padding-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
 
-    transition: margin-left 0.5s;
+body .title-line {
+    height: 5px;
+    width: 90%;
+    margin: auto;
+    border-width: 0;
+    background-color: var(--topnav-background-color);
+}
+
+#projects {
+    margin-bottom: 10px;
+}
+
+#notes {
+    margin-bottom: 10px;
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    height: 220px;
+    padding: 10px 10px;
 
     
-    visibility: hidden;
 }
 
-body .topnav .topnav-content a #notes-text {
-    margin-left: -53.97px;
+/* Remove extra left and right margins, due to padding in columns */
+
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
 }
 
-body .topnav .topnav-content a #projects-text {
-    margin-left: -70.93px;
+/* Style the counter cards */
+.card {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+text-align: center;
+background-color: var(--topnav-background-color);
+border-radius: 10px;
+height: 200px;
+width: 100%;
+font-family: var(--merriweather-bold);
+font-size: 25px;
+
+transition: box-shadow 0.2s ease-in-out;
+transition: height 0.2s ease-in-out;
 }
 
-#projects-bar {
-    position: absolute;
+.card-picture {
+width: 100%; 
+height: 80%; 
+border-radius: 10px 10px 0px 0px;
+margin-bottom: 5px;
 
-    top: 0;
-    bottom:0;
-
-    margin-top: auto;
-    margin-bottom: auto;
-
-    height: 24.8px;
-
-    /*102.18px - 31.25px*/
-
-    transition: transform 0.5s;
+transition: height 0.2s ease-in-out;
 }
 
-body .topnav .topnav-content a:hover #projects-bar {
-    transform:translateX(0);
+.column:hover .card {
+    transition-delay: 1s;
+
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.9); /* this adds the "card" effect */
+
+    width: 359.8px;
+    height: 300px;
+
+    z-index: 1;
 }
 
-#notes-bar {
-    position: absolute;
+.column:hover .card-picture {
+    transition-delay: 1s;
 
-    top: 0;
-    bottom:0;
-
-    margin-top: auto;
-    margin-bottom: auto;
-
-    height: 25px;
-
-    /*72.72px - 18.75px*/
-
-    transition: transform 0.5s;
+    width: 100%;
+    height: 10%;
 }
 
-body .topnav .topnav-content a:hover #notes-bar {
-    transform:translateX(0);
+
+
+#about-me {
+margin-top: 70.4px;
+margin-bottom: 10px;
+width: 1000px;
+margin-left: auto;
+margin-right: auto;
+padding-top: 70px;
+padding-bottom: 70px;
 }
 
-body .topnav .topnav-content a:hover #notes-text {
-    margin-left: 18.75px;
-}
+#about-me-content {
+    font-family: var(--merriweather-regular);
+    font-size: 20px;
 
-body .topnav .topnav-content a:hover #projects-text {
-    margin-left: 31.25px;
-}
-
-body .topnav .topnav-content a:hover span {
-    visibility: visible;
-}
-
-.homecontent {
-    margin: auto;
-    margin-top: 10px;
-    width: 90%;
-}
-
-.homecontent::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-#aboutme {
-    float: left;
+    width: 600px;
+    height: 500px;
+    
     border-style: solid;
-    border-color: var(--topnav-background-color);
     border-width: 5px;
+    border-color: var(--topnav-background-color);
+    border-left-style: none;
+    border-radius: 0px 10px 10px 0px;
+
     padding: 10px;
+
+    float: left;
+}
+
+#about-me-title {
+    font-family: var(--merriweather-bold);
+    font-size: 45px;
+    padding-bottom: 5px;    
+}
+
+#profile-picture {
+    position: relative;
+    width: 400px;
+    height: 500px;
+
+    
+    background-color: var(--topnav-background-color);
+    float: left;
+
+    border-radius: 10px 0px 0px 10px;
+}
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+#about-me-more {
+    text-decoration: none;
+    color: var(--clickable-color);
 }

@@ -6,31 +6,191 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css" integrity="sha512-zcatBMvxa7rT7dDklfjauWsfiSFParF+hRfCdf4Zr40/MmA1gkFcBRbop0zMpvYF3FmznYFgcL8wlcuO/GwHoA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script src="https://kit.fontawesome.com/6341b1be96.js" crossorigin="anonymous"></script>
+    <script>hljs.highlightAll();</script>
     <title>Amir Nakhoda</title>
 </head>
 
 <body>
-    <div class="topnav">
+    <div id="topnavbar" class="topnav">
         <a class="name" href="index.html">Amir Nakhoda</a>
         <div class="topnav-content">
-            <a href="">
-                <i id="projects-bar" class="fa-solid fa-code"></i>
-                <span id="projects-text">Projects</span>
+            <a href="" class="icon-bar">
+                <i class="fa-solid fa-code">
+                </i>
             </a>
-            <a href="">
-                <i id="notes-bar"class="fa-regular fa-clipboard" icon-width="18.75" text-width="72.72px"></i>
-                <span id="notes-text">Notes</span>
+            <a href="" class="icon-bar">
+                <i class="fa-regular fa-clipboard">
+                </i>
             </a>
         </div>
     </div>
 
-    <div class="homecontent">
-        <img src="images/placeholder.jpg" alt="Amir Nakhoda" style="width: 500px; height: 625px; float: left;">
-        <div id="aboutme">
-            <h1>About Me.</h1>
+    <div id="content">
+
+    </div>
+    
+    <div id="about-me" class="clearfix">
+        <div id="profile-picture">
+            <img src="images/placeholder.jpg" style="width:100%; height: 100%; object-fit: cover; border-radius: 10px 0px 0px 10px;">  
+        </div>  
+        <div id="about-me-content">
+            <p id="about-me-title">About</p>
+            <br>
+            <p>Hi, I am Amir Nakhoda.</p>
+            <br>
+            <p>This website contains a collection of my personal projects and notes for C# and Unity.</p>
+            <br>
+            <a id="about-me-more" href="" >More...</a>
+        </div>        
+    </div>
+
+    <hr class="title-line">
+    
+    <div id="projects">
+        <p class="front-titles">Projects</p>
+        <div class="row">
+
+            <a href="">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-picture">
+                            <img src="images/AStarTitlePicture.PNG" style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
+                        </div>
+                        <p>Pathfinding</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-picture">
+                            <img src="images/placeholder.jpg" style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
+                        </div>
+                        <p>Test 1</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-picture">
+                            <img src="images/placeholder.jpg" style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
+                        </div>
+                        <p>Test 2</p>
+                        <div class="card-down"></div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-picture">
+                            <img src="images/placeholder.jpg" style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
+                        </div>
+                        <p>Test 3</p>
+                        <div class="card-down"></div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-picture">
+                            <img src="images/placeholder.jpg" style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
+                        </div>
+                        <p>Test 3</p>
+                        <div class="card-down"></div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-picture">
+                            <img src="images/placeholder.jpg" style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
+                        </div>
+                        <p>Test 3</p>
+                        <div class="card-down"></div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-picture">
+                            <img src="images/placeholder.jpg" style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
+                        </div>
+                        <p>Test 3</p>
+                        <div class="card-down"></div>
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
+
+    <hr class="title-line">
+
+    <div id="notes">
+        <p class="front-titles">Notes</p>
+        <div class="row">
+
+            <a href="">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-picture">
+                            
+                        </div>
+                        <p>Test 0</p>
+                        <div class="card-down"></div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-picture">
+                            
+                        </div>
+                        <p>Test 1</p>
+                        <div class="card-down"></div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-picture">
+                            
+                        </div>
+                        <p>Test 2</p>
+                        <div class="card-down"></div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-picture">
+                            
+                        </div>
+                        <p>Test 3</p>
+                        <div class="card-down"></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script src="javascript/website.js"></script>
 </body> 
 
 </html>
