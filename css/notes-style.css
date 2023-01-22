@@ -6,3 +6,28 @@
 #notes-content section{
     scroll-margin-top: 60.4px;
 }
+
+#title {
+    font-family: var(--merriweather-bold);
+    font-size: 45px;
+}
+
+.second-title {
+    font-family: var(--merriweather-bold);
+    font-size: 40px;
+}
+
+.third-title {
+    font-family: var(--merriweather-bold);
+    font-size: 35px;
+}
+
+.fourth-title {
+    font-family: var(--merriweather-bold);
+    font-size: 30px;
+}
+
+p {
+    font-family: var(--merriweather-regular);
+    font-size: 20px;
+}
