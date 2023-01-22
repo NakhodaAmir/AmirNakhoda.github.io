@@ -1,0 +1,34 @@
+.topnav {
+    background-color: var(--topnav-background-color);
+    display: flex;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    z-index: 9;
+    width: 100%;
+}
+
+.topnav a.name {
+    font-size: 40px;
+    font-family: var(--merriweather-bolditalic);
+    margin: auto auto auto 0;
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+.topnav .topnav-content {
+    margin: auto 0 auto auto;
+}
+
+.icon-bar {
+    font-size: 30px;
+    text-decoration: none;
+    padding-right: 25px;
+}
+
+#navbar-placeholder {
+    height: 60.4px;
+}
