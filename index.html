@@ -5,36 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css" integrity="sha512-zcatBMvxa7rT7dDklfjauWsfiSFParF+hRfCdf4Zr40/MmA1gkFcBRbop0zMpvYF3FmznYFgcL8wlcuO/GwHoA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="css/index-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css" integrity="sha512-zcatBMvxa7rT7dDklfjauWsfiSFParF+hRfCdf4Zr40/MmA1gkFcBRbop0zMpvYF3FmznYFgcL8wlcuO/GwHoA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script src="https://kit.fontawesome.com/6341b1be96.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>hljs.highlightAll();</script>
     <title>Amir Nakhoda</title>
 </head>
 
 <body>
-    <div id="topnavbar" class="topnav">
-        <a class="name" href="index.html">Amir Nakhoda</a>
-        <div class="topnav-content">
-            <a href="" class="icon-bar">
-                <i class="fa-solid fa-code">
-                </i>
-            </a>
-            <a href="" class="icon-bar">
-                <i class="fa-regular fa-clipboard">
-                </i>
-            </a>
-        </div>
-    </div>
+    <div id="navbar-placeholder"></div>
 
-    <div id="content">
-
-    </div>
-    
     <div id="about-me" class="clearfix">
         <div id="profile-picture">
-            <img src="images/placeholder.jpg" style="width:100%; height: 100%; object-fit: cover; border-radius: 10px 0px 0px 10px;">  
-        </div>  
+            <img src="images/placeholder.jpg"
+                style="width:100%; height: 100%; object-fit: cover; border-radius: 10px 0px 0px 10px;">
+        </div>
         <div id="about-me-content">
             <p id="about-me-title">About</p>
             <br>
@@ -42,12 +29,12 @@
             <br>
             <p>This website contains a collection of my personal projects and notes for C# and Unity.</p>
             <br>
-            <a id="about-me-more" href="" >More...</a>
-        </div>        
+            <a class="clickable-text" href="">More...</a>
+        </div>
     </div>
 
     <hr class="title-line">
-    
+
     <div id="projects">
         <p class="front-titles">Projects</p>
         <div class="row">
@@ -56,7 +43,8 @@
                 <div class="column">
                     <div class="card">
                         <div class="card-picture">
-                            <img src="images/AStarTitlePicture.PNG" style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
+                            <img src="images/AStarTitlePicture.PNG"
+                                style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
                         </div>
                         <p>Pathfinding</p>
                     </div>
@@ -67,7 +55,8 @@
                 <div class="column">
                     <div class="card">
                         <div class="card-picture">
-                            <img src="images/placeholder.jpg" style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
+                            <img src="images/placeholder.jpg"
+                                style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
                         </div>
                         <p>Test 1</p>
                     </div>
@@ -78,7 +67,8 @@
                 <div class="column">
                     <div class="card">
                         <div class="card-picture">
-                            <img src="images/placeholder.jpg" style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
+                            <img src="images/placeholder.jpg"
+                                style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
                         </div>
                         <p>Test 2</p>
                         <div class="card-down"></div>
@@ -90,7 +80,8 @@
                 <div class="column">
                     <div class="card">
                         <div class="card-picture">
-                            <img src="images/placeholder.jpg" style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
+                            <img src="images/placeholder.jpg"
+                                style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
                         </div>
                         <p>Test 3</p>
                         <div class="card-down"></div>
@@ -102,7 +93,8 @@
                 <div class="column">
                     <div class="card">
                         <div class="card-picture">
-                            <img src="images/placeholder.jpg" style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
+                            <img src="images/placeholder.jpg"
+                                style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
                         </div>
                         <p>Test 3</p>
                         <div class="card-down"></div>
@@ -113,7 +105,8 @@
                 <div class="column">
                     <div class="card">
                         <div class="card-picture">
-                            <img src="images/placeholder.jpg" style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
+                            <img src="images/placeholder.jpg"
+                                style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
                         </div>
                         <p>Test 3</p>
                         <div class="card-down"></div>
@@ -125,13 +118,15 @@
                 <div class="column">
                     <div class="card">
                         <div class="card-picture">
-                            <img src="images/placeholder.jpg" style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
+                            <img src="images/placeholder.jpg"
+                                style="width:100%; height: 100%; object-fit: cover; object-position: 100% 80%; border-radius: 10px 10px 0px 0px;">
                         </div>
                         <p>Test 3</p>
                         <div class="card-down"></div>
                     </div>
                 </div>
             </a>
+
         </div>
     </div>
 
@@ -141,56 +136,91 @@
         <p class="front-titles">Notes</p>
         <div class="row">
 
-            <a href="">
-                <div class="column">
-                    <div class="card">
-                        <div class="card-picture">
-                            
-                        </div>
-                        <p>Test 0</p>
-                        <div class="card-down"></div>
+            <div class="column">
+                <div id="notes-dsag" class="card">
+                    <div class="card-picture">
+                        <img src="images/DSATitlePicture.png"
+                            style="width:100%; height: 100%; object-fit: cover; object-position: 100% 30%;  border-radius: 10px 10px 0px 0px;">
                     </div>
+                    <p>D.S.A.</p>
+                    <div class="card-down">
+                        <div class="card-description">
+                            <ul>
+                                <li><a class="clickable-text" href="">Asymptotic Analysis</a>
+                                    <ul>
+                                        <li><a class="clickable-text" href="">Big-O Notation</a></li>
+                                        <li><a class="clickable-text" href="">Little-o Notation</a></li>
+                                        <li><a class="clickable-text" href="">Big-Omega Notation</a></li>
+                                        <li><a class="clickable-text" href="">Little-omega Notation</a></li>
+                                        <li><a class="clickable-text" href="">Big-Theta Notation</a></li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <li><a class="clickable-text" href="">Amortized Analysis</a></li>
+                                <br>
+                                <li><a class="clickable-text" href="">Algorithm Analysis</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="big-link" href=""></a>
                 </div>
-            </a>
+            </div>
 
-            <a href="">
-                <div class="column">
-                    <div class="card">
-                        <div class="card-picture">
-                            
-                        </div>
-                        <p>Test 1</p>
-                        <div class="card-down"></div>
+            <div class="column">
+                <div id="notes-mformula" class="card">
+                    <div class="card-picture">
+                        <img src="images/MathFormulaTitlePicture.jpg"
+                            style="width:100%; height: 100%; object-fit: cover; object-position: 100% 40%; border-radius: 10px 10px 0px 0px;">
                     </div>
+                    <p>Math Formulas</p>
+                    <div class="card-down">
+                        <div class="card-description">
+                            <ul>
+                                <li>
+                                    <a class="clickable-text" href="">Physical Distance</a>
+                                    <ul>
+                                        <li><a class="clickable-text" href="">Euclidean Distance</a></li>
+                                        <li><a class="clickable-text" href="">Manhattan Distance</a></li>
+                                        <li><a class="clickable-text" href="">Chebyshev Distance</a></li>
+                                        <li><a class="clickable-text" href="">Octile Distance</a></li>
+                                        <li><a class="clickable-text" href="">Sexvigintile Distance</a></li>
+                                        <li><a class="clickable-text" href="">Relationship of Distances</a></li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <li><a class="clickable-text" href="">Kinematics</a>
+                                    <ul>
+                                        <li><a class="clickable-text" href="">SUVAT Equations</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="big-link" href=""></a>
                 </div>
-            </a>
+            </div>
 
-            <a href="">
-                <div class="column">
-                    <div class="card">
-                        <div class="card-picture">
-                            
-                        </div>
-                        <p>Test 2</p>
-                        <div class="card-down"></div>
-                    </div>
-                </div>
-            </a>
 
-            <a href="">
-                <div class="column">
-                    <div class="card">
-                        <div class="card-picture">
-                            
-                        </div>
-                        <p>Test 3</p>
-                        <div class="card-down"></div>
+            <div class="column">
+                <div class="card">
+                    <div class="card-picture">
+                        <img src="images/CodeTitlePage.png"
+                            style="width:100%; height: 100%; object-fit: cover; object-position: 100% 40%; border-radius: 10px 10px 0px 0px;">
                     </div>
+                    <p>Code</p>
+                    <div class="card-down">
+                        <div class="card-description">
+
+                        </div>
+                    </div>
+                    <a class="big-link" href=""></a>
                 </div>
-            </a>
+            </div>
+
+
         </div>
     </div>
-    <script src="javascript/website.js"></script>
-</body> 
+    <script src="javascript/navbar.js"></script>
+</body>
 
 </html>
