@@ -31,3 +31,21 @@ p {
     font-family: var(--merriweather-regular);
     font-size: 20px;
 }
+
+.content-line {
+    height: 5px;
+    width: 90%;
+    margin: auto;
+    border-width: 0;
+    background-color: var(--topnav-background-color);
+}
+
+.mini-line {
+    height: 2.5px;
+    width: 90%;
+    margin: auto;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    border-width: 0;
+    background-color: var(--topnav-background-color);
+}
