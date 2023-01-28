@@ -4,13 +4,31 @@ html {
 }
 
 /* 2. Make nav sticky */
-main > nav {
+main>nav {
     position: sticky;
     top: 70.4px;
     align-self: start;
 
     font-style: var(--merriweather-regular);
     font-size: 20px;
+    height: 90vh;
+    overflow-y: auto;
+}
+
+main>nav::-webkit-scrollbar {
+    width: 10px;
+}
+
+main>nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+main>nav::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 5px;
+}
+main > nav:hover::-webkit-scrollbar-thumb {
+    background: #4A4A4A;
 }
 
 /* 3. ScrollSpy active styles (see JS tab for activation) */

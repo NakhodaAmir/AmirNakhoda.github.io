@@ -7,6 +7,15 @@
     margin-bottom: 5px;
 }
 
+.sub-titles {
+    font-family: var(--merriweather-bold);
+    text-align: center;
+    font-size: 35px;
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
 body .title-line {
     height: 5px;
     width: 90%;
@@ -131,6 +140,17 @@ body .title-line {
 .column:hover #notes-mformula {
     transition-delay: 1s;
     height: 306px;
+    /*add 20*/
+}
+
+#notes-code {
+    height: 200px;
+    transition: height 0.2s ease-in-out;
+}
+
+.column:hover #notes-code {
+    transition-delay: 1s;
+    height: 261.2px;
     /*add 20*/
 }
 
