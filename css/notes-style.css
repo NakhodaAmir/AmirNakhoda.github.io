@@ -49,3 +49,10 @@ p {
     border-width: 0;
     background-color: var(--topnav-background-color);
 }
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

@@ -21,6 +21,9 @@
     <script src="https://kit.fontawesome.com/6341b1be96.js" crossorigin="anonymous"></script>
     <!--Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!--Math-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <!--highlight code syntax function-->
     <script>hljs.highlightAll();</script>
 
@@ -42,8 +45,7 @@
                                 <li class=""><a href="#dsag--asymptoticanalysis--bigomega">Big-Omega Notation</a></li>
                                 <li class=""><a href="#dsag--asymptoticanalysis--littleomega">Little-omega Notation</a>
                                 </li>
-                                <li class=""><a href="#dsag--asymptoticanalysis--rel">Relationship between Big-O,
-                                        Little-o, Big-Omega, Little-omega</a></li>
+                                <li class=""><a href="#dsag--asymptoticanalysis--rel">Relationship</a></li>
                                 <li class=""><a href="#dsag--asymptoticanalysis--bigtheta">Big-Theta Notation</a></li>
                             </ul>
                         </li>
@@ -63,7 +65,8 @@
                                 <li class=""><a href="#mformula--physicaldistance--cheby">Chebyshev Distance</a></li>
                                 <li class=""><a href="#mformula--physicaldistance--oct">Octile Distance</a></li>
                                 <li class=""><a href="#mformula--physicaldistance--sex">Sexvigintile Distance</a></li>
-                                <li class=""><a href="#mformula--physicaldistance--rel">Relationship of Distances</a></li>
+                                <li class=""><a href="#mformula--physicaldistance--rel">Relationship of Distances</a>
+                                </li>
                             </ul>
                         </li>
                         <li class=""><a href="#mformula--kinematics">Kinematics</a>
@@ -189,6 +192,28 @@
                 <section id="dsag--algorithmanalysis">
                     <p class="third-title">Algorithm Analysis</p>
                     <img src="images/Big-o Notation Algorithm Analysis.png" alt="">
+                    <table>
+                        <tr>
+                            <th>Big O Notation</th>
+                            <th>Time Complexity</th>
+                        </tr>
+                        <tr>
+                            <td>Constant</td>
+                            <td>O(1)</td>
+                        </tr>
+                        <tr>
+                            <td>Logarithmic</td>
+                            <td>O(logn)</td>
+                        </tr>
+                        <tr>
+                            <td>Linear</td>
+                            <td>O(1)</td>
+                        </tr>
+                        <tr>
+                            <td>Quadratic</td>
+                            <td>O(n &#xb2)</td>
+                        </tr>
+                    </table>
                 </section>
             </section>
             <br>
@@ -207,49 +232,231 @@
                     <br>
                     <section id="mformula--physicaldistance--eucl">
                         <p class="fourth-title">Euclidean Distance</p>
-                        <p>The Euclidean distance between two points in euclidean space is the length of a line segment between the two points.</p>
+                        <p>The Euclidean distance between two points in euclidean space is the length of a line segment
+                            between the two points.</p>
+                        <br>
+                        <p><strong>1 Dimension</strong></p>
+                        <p>The distance between any two points on the real line is the absolute value of the numerical
+                            difference of their coordinates. Thus if \(p\)
+                            and \(q\)
+                            are two points on the real line, then the distance between them,
+                            \(d\), is given by: $$d(p, q) = |p - q|$$</p>
+                        <pre><code class="language-csharp">
+                            //Pseudocode
+                            public float Distance(float p, float q)
+                            {
+                              return Math.Abs(p - q);
+                            }
+                        </code></pre>
+                        <br>
+                        <P><strong>2 Dimension</strong></P>
+                        <p>In the Euclidean plane, let point \(p\)
+                            have Cartesian coordinates \((p_1, p_2)\)
+                            and let point \(q\)
+                            have coordinates \((q_1, q_2)\). Then the distance between them, \(d\), is given by: $$d(p,
+                            q) = \sqrt{(q_1 - p_1)^2 + (q_2 - p_2)^2}$$</p>
+                        <pre><code class="language-csharp">
+                            //Pseudocode
+                            public float Distance(float p, float q)
+                            {
+                                return Math.Abs(p - q);
+                            }
+                        </code></pre>
+                        <br>
+                        <P><strong>3 Dimension</strong></P>
+                        <p>In the Euclidean plane, let point \(p\)
+                            have Cartesian coordinates \((p_1, p_2, p_3)\)
+                            and let point \(q\)
+                            have coordinates \((q_1, q_2, q_3)\). Then the distance between them, \(d\), is given by:
+                            $$d(p, q) = \sqrt{(q_1 - p_1)^2 + (q_2 - p_2)^2 + (q_3 - p_3)^2}$$</p>
+                        <pre><code class="language-csharp">
+                            //Pseudocode
+                            //Points p and q are represented as Vector3 variables where (p1, p2, p3) and (q1, q2, q3) = (p.x, p.y, p.z)
+                            //and (q.x, q.y, q.z) respectively.
+                            public float Distance(Vector3 p, Vector3 q)
+                            {
+                            return  Math.Sqrt(((q.x - p.x) * (q.x - p.x) + (q.y - p.y) * (q.y - p.y) + (q.z - p.z) * (q.z - p.z)));
+                            }
+                        </code></pre>
                     </section>
                     <br>
                     <br>
                     <br>
                     <section id="mformula--physicaldistance--manh">
                         <p class="fourth-title">Manhattan Distance</p>
+                        <p>Also known as the taxicab geometry is a form of geometry in which the usual distance function
+                            or metric of Euclidean geometry is replaced by a new metric in which the distance between
+                            two points is the sum of the absolute differences of their Cartesian coordinates.</p>
+                        <br>
+                        <p><strong>2 Dimension</strong></p>
+                        <p>In the Euclidean plane, let point \(p\) have Cartesian coordinates \((p_1, p_2)\) and let
+                            point \(q\) have coordinates \((q_1, q_2)\). Then the distance between them, \(d\), is given
+                            by: $$d(p, q) = |p_1 - q_1| + |p_2 - q_2|$$</p>
+                        <pre><code class="language-csharp">
+                            //Pseudocode
+                            //Points p and q are represented as Vector2 variables where (p1, p2) and (q1, q2) = (p.x, p.y) and (q.x, q.y) respectively.
+                            public float Distance(Vector2 p, Vector2 q)
+                            {
+                            return  Math.Abs(p.x - q.x) + Math.Abs(p.y - q.y);
+                            }
+                        </code></pre>
+                        <br>
+                        <p><strong>3 Dimension</strong></p>
+                        <p>In the Euclidean plane, let point \(p\) have Cartesian coordinates \((p_1, p_2, p_3)\) and
+                            let point \(q\) have coordinates \((q_1, q_2, q_3)\). Then the distance between them, \(d\),
+                            is given by: $$d(p, q) = |p_1 - q_1| + |p_2 - q_2| + |p_3 - q_3|$$</p>
+                        <pre><code class="language-csharp">
+                            //Pseudocode
+                            //Points p and q are represented as Vector3 variables where (p1, p2, p3) and (q1, q2, q3) = (p.x, p.y, p.z)
+                            //and (q.x, q.y, q.z) respectively.
+                            public float Distance(Vector3 p, Vector3 q)
+                            {
+                            return  Math.Abs(p.x - q.x) + Math.Abs(p.y - q.y) + Math.Abs(p.z - q.z);
+                            }
+                        </code></pre>
                     </section>
                     <br>
                     <br>
                     <br>
                     <section id="mformula--physicaldistance--cheby">
                         <p class="fourth-title">Chebyshev Distance</p>
+                        <p>Chebyshev distance is a distance metric which is the maximum absolute distance in one
+                            dimension of two N dimensional points.</p>
+                        <br>
+                        <p><strong>2 Dimension</strong></p>
+                        <p>In the Euclidean plane, let point \(p\) have Cartesian coordinates \((p_1, p_2)\) and let
+                            point \(q\) have coordinates \((q_1, q_2)\). Then the distance between them, \(d\), is given
+                            by: $$d(p, q) = max(|p_1 - q_1|, |p_2 - q_2|)$$</p>
+                        <pre><code class="language-csharp">
+                            //Points p and q are represented as Vector2 variables where (p1, p2) and (q1, q2) = (p.x, p.y) and (q.x, q.y) respectively.
+                            public float Distance(Vector2 p, Vector2 q)
+                            {
+                            return  Math.Max(Math.Abs(p.x - q.x), Math.Abs(p.y - q.y));
+                            }
+                        </code></pre>
+                        <br>
+                        <p><strong>3 Dimension</strong></p>
+                        <p>In the Euclidean plane, let point \(p\) have Cartesian coordinates \((p_1, p_2, p_3)\) and
+                            let point \(q\) have coordinates \((q_1, q_2, q_3)\). Then the distance between them, \(d\),
+                            is given by: $$d(p, q) = max(|p_1 - q_1|, |p_2 - q_2|, |p_3 - q_3|)$$</p>
+                        <pre><code class="language-csharp">
+                            //Pseudocode
+                            //Points p and q are represented as Vector3 variables where (p1, p2, p3) and (q1, q2, q3) = (p.x, p.y, p.z)
+                            //and (q.x, q.y, q.z) respectively.
+                            public float Distance(Vector3 p, Vector3 q)
+                            {
+                            return  Math.Max(Math.Abs(p.x - q.x) + Math.Abs(p.y - q.y) + Math.Abs(p.z - q.z));
+                            }
+                        </code></pre>
                     </section>
                     <br>
                     <br>
                     <br>
                     <section id="mformula--physicaldistance--oct">
                         <p class="fourth-title">Octile Distance</p>
+                        <p>Octile distance is the distance between two points where the respective lengths of cardinal
+                            and ordanal moves are 1 and \(\sqrt{2}\) in 2 dimensions.</p>
+                        <br>
+                        <p>In the Euclidean plane, let point \(p\) have Cartesian coordinates \((p_1, p_2)\) and let
+                            point \(q\) have coordinates \((q_1, q_2)\). Then the distance between them, \(d\), is given
+                            by: $$d(p, q) = max(|p_1 - q_1|, |p_2 - q_2|) + (\sqrt{2} - 1) * min(|p_1 - q_1|, |p_2 -
+                            q_2|)$$</p>
+                        <pre><code class="language-csharp">
+                            //Pseudocode
+                            //Points p and q are represented as Vector2 variables where (p1, p2) and (q1, q2) = (p.x, p.y) and (q.x, q.y) respectively.
+                            public float Distance(Vector2 p, Vector2 q)
+                            {
+                            return Math.Max(Math.Abs(p.x - q.x), Math.Abs(p.y - q.y)) + (Math.Sqrt(2) - 1) * Math.Min(Math.Abs(p.x - q.x), Math.Abs(p.y - q.y));
+                            }
+                        </code></pre>
+                        <br>
+                        <p>This formula can be generalized, as shown below, $$d(p, q) = max(|p_1 - q_1|, |p_2 - q_2|) +
+                            (D - 1) * min(|p_1 - q_1|, |p_2 - q_2|)$$</p>
+                        <br>
+                        <p>Where when \(D = 1\), the formula will regress to the Chebyshev distance.</p>
+                        <br>
+                        <p>When \(D = 2\), the formula will turn into the Manhattan distance.</p>
+                        <br>
+                        <p>Octile distance is when \(D = \sqrt2\)</p>
                     </section>
                     <br>
                     <br>
                     <br>
                     <section id="mformula--physicaldistance--sex">
                         <p class="fourth-title">Sexvigintile Distance</p>
+                        <p>Sexvigintile distance builds upon the Octile distance for 3 dimensional space.</p>
+                        <br>
+                        <p>Given two points, \(p\) and \(q\), which are distance \(x∆\), \(y∆\), and \(z∆\) apart in
+                            each of the three dimensions respectively let, $$dmax = max(x∆, y∆, z∆)$$ $$dmin = min(x∆,
+                            y∆, z∆)$$ $$dmid = \lbrace x∆, y∆, z∆ \rbrace - \lbrace dmax, dmin \rbrace$$</p>
+                        <br>
+                        <p>Then the distance between these points, \(d\), is given by: $$d(p, q) = (\sqrt{3} - \sqrt{2})
+                            * dmin + (\sqrt{2} - 1) * dmid + dmax$$</p>
+                        <pre><code class="language-csharp">
+                            //Pseudocode
+                            //Points p and q are represented as Vector3 variables where (p1, p2, p3) and (q1, q2, q3) = (p.x, p.y, p.z)
+                            public float Distance(Vector3 p, Vector3 q)
+                            {
+                                float dX = x∆;
+                                float dY = y∆;
+                                float dZ = z∆;
+                                
+                                //Function sorts the 3 delta distances and returns dmin, dmid and dmax which are the minimum delta distance, 
+                                //middle delta distance and max delta distance respectively
+                                Sort3(dX, dY, dZ, out float dmin, out float dmid, out float dmax);
+
+                                return (Math.Sqrt(3) - Math.Sqrt(2)) * dmin + (Math.Sqrt(2) - 1) * dmid + dmax;
+                            }
+                        </code></pre>
+                        <br>
+                        <p>This formula can be generalized, as shown below, $$d(p, q) = (D_2 - D_1) * dmin + (D_1 - 1) *
+                            dmid + dmax$$</p>
+                        <br>
+                        <p>Where when \(D_2 = 1\) and \(D_1 = 1\), the formula will regress to the Chebyshev distance.
+                        </p>
+                        <br>
+                        <p>When \(D_2 = 3\) and \(D_1 = 2\), the formula will turn into the Manhattan distance.</p>
+                        <br>
+                        <p>Sexvigintile distance is when \(D_2 = \sqrt3\) and \(D_1 = \sqrt2\)</p>
                     </section>
                     <br>
                     <br>
                     <br>
                     <section id="mformula--physicaldistance--rel">
                         <p class="fourth-title">Relationship of Distances</p>
+                        <p><strong>2 Dimension</strong></p>
+                        <p style="text-align: center;">Scale</p>
+                        <br>
+                        <img src="images/2DScale.png">
+                        <br>
+                        <p style="text-align: center;">Relationship on a 2 dimensional graph</p>
+                        <br>
+                        <img src="images/RelationshipOf2DDistances.png">
+                        <br>
+                        <p><strong>3 Dimension</strong></p>
+                        <p style="text-align: center;">Scale</p>
+                        <br>
+                        <img src="images/3DScale.png">
+                        <br>
+                        <p style="text-align: center;">Relationship on a 3 dimensional graph</p>
+                        <br>
+                        <img src="images/183699924-b9443992-30d3-4dc7-b174-14ac8c97b4a8.gif">
+                        <br>
+                        <p style="text-align: center;">Euclidean = 3.00, Manhattan = 5.00, Chebyshev = 2.00, Sexvigintile = 3.15</p>
                     </section>
                 </section>
                 <br>
+                <br>
+                <hr class="content-line">
                 <br>
                 <br>
                 <section id="mformula--kinematics">
                     <p class="third-title">Kinematics</p>
                     <br>
-                    <br>
-                    <br>
                     <section id="mformula--kinematics--suvat">
                         <p class="fourth-title">SUVAT Equations</p>
+                        <P>The SUVAT Equations describe motion in a given direction when acceleration is a constant. The SUVAT equations are: $$v = u + at$$ $$s = ut + {{at^2}\over 2}$$ $$v^2 = u^2 + 2as$$ $$s = {{v + u}\over 2}t$$ $$s = vt - {{at^2}\over 2}$$</P>
+                        <p>Where \(s\) is displacement, \(u\) is initial velocity, \(v\) is final velocity, \(a\) is acceleration and \(t\) is total time.</p>
                     </section>
                 </section>
             </section>
