@@ -62,3 +62,18 @@ table, th, td {
     border-collapse: collapse;
     padding: 10px;
 }
+
+.videos {
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+
+    width: 800px;
+    height: 450px;
+}
+
+.square {
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+}
