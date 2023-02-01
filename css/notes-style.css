@@ -3,13 +3,19 @@
     padding-left: 10px;
 }
 
-#notes-content section{
+#notes-content section {
     scroll-margin-top: 60.4px;
 }
 
 #title {
     font-family: var(--merriweather-bold);
-    font-size: 45px;
+    font-size: 100px;
+    text-align: center;
+    padding-top: 35.2px;
+}
+
+#title i {
+    padding-right: 25px;
 }
 
 .second-title {
@@ -57,15 +63,17 @@ img {
     width: 50%;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #d4d4d4;
     border-collapse: collapse;
     padding: 10px;
 }
 
 .videos {
-    display: block; 
-    margin-left: auto; 
+    display: block;
+    margin-left: auto;
     margin-right: auto;
 
     width: 800px;
@@ -77,3 +85,59 @@ table, th, td {
     height: 13px;
     width: 13px;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+}
+
+.grid-item {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: left;
+}
+
+pre[class*="language-"] {
+    position: relative;
+    overflow: auto;
+  
+    /* make space  */
+    margin: 5px 0;
+    padding: 1.75rem 0 1.75rem 1rem;
+    border-radius: 10px;
+    background-color: rgb(34, 39, 46);
+  }
+
+pre[class*="language-"] button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  
+    font-size: 30px;
+
+    background-color: rgb(34, 39, 46);
+    border-width: 0;
+
+    margin: 20px;
+    z-index: 1;
+  }
+
+  pre[class*="language-"] button:hover {
+    cursor: pointer;
+  }
+
+  .placeholder-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  
+    font-size: 30px;
+
+    background-color: rgb(34, 39, 46);
+    border-width: 0;
+
+    margin: 20px;
+    z-index: 0;
+  }

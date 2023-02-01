@@ -36,10 +36,12 @@
     <main>
         <nav class="section-nav">
             <ol>
-                <li><a href="#dsag">Data Strcuture & Algorithms</a>
+                <li><a class="nav-title" href="#tablecontents">Table of Contents</a></li>
+                <br>
+                <li><a href="#dsag" class="nav-title">Data Strcuture & Algorithms</a>
                     <ul>
                         <li class=""><a href="#dsag--asymptoticanalysis">Asymptotic Analysis</a>
-                            <ul>
+                            <ul class="nav-subtitle">
                                 <li class=""><a href="#dsag--asymptoticanalysis--bigo">Big-O Notation</a></li>
                                 <li class=""><a href="#dsag--asymptoticanalysis--littleo">Little-o Notation</a></li>
                                 <li class=""><a href="#dsag--asymptoticanalysis--bigomega">Big-Omega Notation</a></li>
@@ -54,12 +56,12 @@
                     </ul>
                 </li>
             </ol>
-            <hr class="mini-line">
+            <br>
             <ol>
-                <li><a href="#mformula">Math Formulas</a>
+                <li><a href="#mformula" class="nav-title">Math Formulas</a>
                     <ul>
                         <li class=""><a href="#mformula--physicaldistance">Physical Distance</a>
-                            <ul>
+                            <ul class="nav-subtitle">
                                 <li class=""><a href="#mformula--physicaldistance--eucl">Euclidean Distance</a></li>
                                 <li class=""><a href="#mformula--physicaldistance--manh">Manhattan Distance</a></li>
                                 <li class=""><a href="#mformula--physicaldistance--cheby">Chebyshev Distance</a></li>
@@ -70,26 +72,26 @@
                             </ul>
                         </li>
                         <li class=""><a href="#mformula--kinematics">Kinematics</a>
-                            <ul>
+                            <ul class="nav-subtitle">
                                 <li class=""><a href="#mformula--kinematics--suvat">SUVAT Equations</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
             </ol>
-            <hr class="mini-line">
+            <br>
             <ol>
-                <li><a href="">Code Snippets</a>
+                <li><a href="" class="nav-title">Code Snippets</a>
                     <ul>
                         <li class=""><a href="">C#</a>
-                            <ul>
+                            <ul class="nav-subtitle">
                                 <li class=""><a href="">Enumeration Class</a></li>
                                 <li class=""><a href="">Finite State Machine</a></li>
                                 <li class=""><a href="">Static Math Class</a></li>
                             </ul>
                         </li>
                         <li class=""><a href="">Unity</a>
-                            <ul>
+                            <ul class="nav-subtitle">
                                 <li class=""><a href="">Static Math Class</a></li>
                                 <li class=""><a href="">Single Layer Mask</a></li>
                             </ul>
@@ -99,6 +101,15 @@
             </ol>
         </nav>
         <div id="notes-content">
+            <section id="tablecontents">
+                <p id="title"><i class="fa-regular fa-clipboard">
+                </i>Notes</p>
+            </section>
+            <br>
+            <br>
+            <hr class="content-line">
+            <br>
+            <br>
             <section id="dsag">
                 <p class="second-title">Data Strcuture & Algorithms</p>
                 <br>
@@ -113,41 +124,41 @@
                     <br>
                     <p>Asymptotic notations:</p>
                     <ul>
-                        <li>Big-O notation (Worst Case)</li>
-                        <li>Little-o notation</li>
-                        <li>Big-Omega notation (Best Case)</li>
-                        <li>Little-omega notation</li>
-                        <li>Big-Theta notation (Average Case)</li>
+                        <li>Big-O notation (\(O\)) (Worst Case)</li>
+                        <li>Little-o notation (\(o\))</li>
+                        <li>Big-Omega notation (\(Ω\)) (Best Case)</li>
+                        <li>Little-omega notation (\(ω\))</li>
+                        <li>Big-Theta notation (\(Θ\)) (Average Case)</li>
                     </ul>
                     <br>
                     <br>
                     <br>
                     <section id="dsag--asymptoticanalysis--bigo">
-                        <p class="fourth-title">Big-O Notation</p>
-                        <p>Big-O notation represents the tight upper bound of the running time of an algorithm, even
+                        <p class="fourth-title">\(O\) Notation</p>
+                        <p>\(O\) notation represents the tight upper bound of the running time of an algorithm, even
                             though, as written, it can also be a loose upper-bound.
-                            Big-O measures the longest amount of time an algorithm can possibly take to complete. Thus,
+                            \(O\) measures the longest amount of time an algorithm can possibly take to complete. Thus,
                             it gives the worst-case complexity of an algorithm.</p>
                     </section>
                     <br>
                     <br>
                     <br>
                     <section id="dsag--asymptoticanalysis--littleo">
-                        <p class="fourth-title">Little-o Notation</p>
+                        <p class="fourth-title">\(o\) Notation</p>
                         <p>To make
-                            Big-O's role as a tight upper-bound more clear,
-                            little-o notation is used to describe an upper-bound that cannot be asymptotically tight.
-                            Thus, little-o
+                            \(O\)'s role as a tight upper-bound more clear,
+                            \(o\) notation is used to describe an upper-bound that cannot be asymptotically tight.
+                            Thus, \(o\)
                             means loose upper bound of the running time of an algorithm.
-                            Little-o is a rough estimate of the maximum order of growth whereas Big-O
+                            \(o\) is a rough estimate of the maximum order of growth whereas \(O\)
                             may be the actual order of growth.</p>
                     </section>
                     <br>
                     <br>
                     <br>
                     <section id="dsag--asymptoticanalysis--bigomega">
-                        <p class="fourth-title">Big-Omega Notation</p>
-                        <p>Big-Omega notation represents the tight lower bound of the running time of an algorithm. It
+                        <p class="fourth-title">\(Ω\) Notation</p>
+                        <p>\(Ω\) notation represents the tight lower bound of the running time of an algorithm. It
                             measures
                             the best amount of time an algorithm can possibly take to complete. Thus, it provides the
                             best case complexity of an algorithm.</p>
@@ -156,18 +167,18 @@
                     <br>
                     <br>
                     <section id="dsag--asymptoticanalysis--littleomega">
-                        <p class="fourth-title">Little-omega Notation</p>
-                        <p> Big-Omega is the tight lower bound notation and Little-omega
+                        <p class="fourth-title">\(ω\) Notation</p>
+                        <p> \(Ω\) is the tight lower bound notation and \(ω\)
                             describes the loose lower bound.
-                            Little-omega is a rough estimate of the order of growth whereas Big-Omega
-                            may represent the exact order of growth. We use Little-omega
+                            \(ω\) is a rough estimate of the order of growth whereas \(Ω\)
+                            may represent the exact order of growth. We use \(ω\)
                             to denote a lower bound that is not asymptotically tight.</p>
                     </section>
                     <br>
                     <br>
                     <br>
                     <section id="dsag--asymptoticanalysis--rel">
-                        <p class="fourth-title">Relationship between Big-O, Little-o, Big-Omega, Little-omega</p>
+                        <p class="fourth-title">Relationship between \(O\), \(o\), \(Ω\), \(ω\)</p>
                         <br>
                         <img src="images/Analysis-of-Algorithms-little-o-omega.png">
                     </section>
@@ -175,8 +186,8 @@
                     <br>
                     <br>
                     <section id="dsag--asymptoticanalysis--bigtheta">
-                        <p class="fourth-title">Big-Theta Notation</p>
-                        <p> Big-Theta notation encloses the function from above and below. Since it represents the upper
+                        <p class="fourth-title">\(Θ\) Notation</p>
+                        <p> \(Θ\) notation encloses the function from above and below. Since it represents the upper
                             and the
                             lower bound of the running time of an algorithm, it is used for analyzing the average-case
                             complexity of an algorithm.</p>
@@ -219,19 +230,19 @@
                         </tr>
                         <tr>
                             <td>Constant</td>
-                            <td>O(1)</td>
+                            <td>\(O\)(1)</td>
                         </tr>
                         <tr>
                             <td>Logarithmic</td>
-                            <td>O(logn)</td>
+                            <td>\(O\)(logn)</td>
                         </tr>
                         <tr>
                             <td>Linear</td>
-                            <td>O(1)</td>
+                            <td>\(O\)(1)</td>
                         </tr>
                         <tr>
                             <td>Quadratic</td>
-                            <td>O(n &#xb2)</td>
+                            <td>\(O\)(n&#xb2)</td>
                         </tr>
                     </table>
                 </section>
@@ -261,11 +272,11 @@
                             and \(q\)
                             are two points on the real line, then the distance between them,
                             \(d\), is given by: $$d(p, q) = |p - q|$$</p>
-                        <pre><code class="language-csharp">
+                        <pre class="language-csharp"><code>
                             //Pseudocode
                             public float Distance(float p, float q)
                             {
-                              return Math.Abs(p - q);
+                                return Math.Abs(p - q);
                             }
                         </code></pre>
                         <br>
@@ -275,12 +286,12 @@
                             and let point \(q\)
                             have coordinates \((q_1, q_2)\). Then the distance between them, \(d\), is given by: $$d(p,
                             q) = \sqrt{(q_1 - p_1)^2 + (q_2 - p_2)^2}$$</p>
-                        <pre><code class="language-csharp">
+                        <pre  class="language-csharp"><code>
                             //Pseudocode
                             //Points p and q are represented as Vector2 variables where (p1, p2) and (q1, q2) = (p.x, p.y) and (q.x, q.y) respectively.
                             public float Distance(Vector2 p, Vector2 q)
                             {
-                              return  Math.Sqrt(((q.x - p.x) * (q.x - p.x) + (q.y - p.y) * (q.y - p.y)));
+                                return  Math.Sqrt(((q.x - p.x) * (q.x - p.x) + (q.y - p.y) * (q.y - p.y)));
                             }
                         </code></pre>
                         <br>
@@ -290,13 +301,13 @@
                             and let point \(q\)
                             have coordinates \((q_1, q_2, q_3)\). Then the distance between them, \(d\), is given by:
                             $$d(p, q) = \sqrt{(q_1 - p_1)^2 + (q_2 - p_2)^2 + (q_3 - p_3)^2}$$</p>
-                        <pre><code class="language-csharp">
+                        <pre class="language-csharp"><code>
                             //Pseudocode
                             //Points p and q are represented as Vector3 variables where (p1, p2, p3) and (q1, q2, q3) = (p.x, p.y, p.z)
                             //and (q.x, q.y, q.z) respectively.
                             public float Distance(Vector3 p, Vector3 q)
                             {
-                            return  Math.Sqrt(((q.x - p.x) * (q.x - p.x) + (q.y - p.y) * (q.y - p.y) + (q.z - p.z) * (q.z - p.z)));
+                                return  Math.Sqrt(((q.x - p.x) * (q.x - p.x) + (q.y - p.y) * (q.y - p.y) + (q.z - p.z) * (q.z - p.z)));
                             }
                         </code></pre>
                     </section>
@@ -313,12 +324,12 @@
                         <p>In the Euclidean plane, let point \(p\) have Cartesian coordinates \((p_1, p_2)\) and let
                             point \(q\) have coordinates \((q_1, q_2)\). Then the distance between them, \(d\), is given
                             by: $$d(p, q) = |p_1 - q_1| + |p_2 - q_2|$$</p>
-                        <pre><code class="language-csharp">
+                        <pre class="language-csharp"><code>
                             //Pseudocode
                             //Points p and q are represented as Vector2 variables where (p1, p2) and (q1, q2) = (p.x, p.y) and (q.x, q.y) respectively.
                             public float Distance(Vector2 p, Vector2 q)
                             {
-                            return  Math.Abs(p.x - q.x) + Math.Abs(p.y - q.y);
+                                return  Math.Abs(p.x - q.x) + Math.Abs(p.y - q.y);
                             }
                         </code></pre>
                         <br>
@@ -326,13 +337,13 @@
                         <p>In the Euclidean plane, let point \(p\) have Cartesian coordinates \((p_1, p_2, p_3)\) and
                             let point \(q\) have coordinates \((q_1, q_2, q_3)\). Then the distance between them, \(d\),
                             is given by: $$d(p, q) = |p_1 - q_1| + |p_2 - q_2| + |p_3 - q_3|$$</p>
-                        <pre><code class="language-csharp">
+                        <pre class="language-csharp"><code>
                             //Pseudocode
                             //Points p and q are represented as Vector3 variables where (p1, p2, p3) and (q1, q2, q3) = (p.x, p.y, p.z)
                             //and (q.x, q.y, q.z) respectively.
                             public float Distance(Vector3 p, Vector3 q)
                             {
-                            return  Math.Abs(p.x - q.x) + Math.Abs(p.y - q.y) + Math.Abs(p.z - q.z);
+                                return  Math.Abs(p.x - q.x) + Math.Abs(p.y - q.y) + Math.Abs(p.z - q.z);
                             }
                         </code></pre>
                     </section>
@@ -348,11 +359,11 @@
                         <p>In the Euclidean plane, let point \(p\) have Cartesian coordinates \((p_1, p_2)\) and let
                             point \(q\) have coordinates \((q_1, q_2)\). Then the distance between them, \(d\), is given
                             by: $$d(p, q) = max(|p_1 - q_1|, |p_2 - q_2|)$$</p>
-                        <pre><code class="language-csharp">
+                        <pre class="language-csharp"><code>
                             //Points p and q are represented as Vector2 variables where (p1, p2) and (q1, q2) = (p.x, p.y) and (q.x, q.y) respectively.
                             public float Distance(Vector2 p, Vector2 q)
                             {
-                            return  Math.Max(Math.Abs(p.x - q.x), Math.Abs(p.y - q.y));
+                                return  Math.Max(Math.Abs(p.x - q.x), Math.Abs(p.y - q.y));
                             }
                         </code></pre>
                         <br>
@@ -360,13 +371,13 @@
                         <p>In the Euclidean plane, let point \(p\) have Cartesian coordinates \((p_1, p_2, p_3)\) and
                             let point \(q\) have coordinates \((q_1, q_2, q_3)\). Then the distance between them, \(d\),
                             is given by: $$d(p, q) = max(|p_1 - q_1|, |p_2 - q_2|, |p_3 - q_3|)$$</p>
-                        <pre><code class="language-csharp">
+                        <pre class="language-csharp"><code>
                             //Pseudocode
                             //Points p and q are represented as Vector3 variables where (p1, p2, p3) and (q1, q2, q3) = (p.x, p.y, p.z)
                             //and (q.x, q.y, q.z) respectively.
                             public float Distance(Vector3 p, Vector3 q)
                             {
-                            return  Math.Max(Math.Abs(p.x - q.x) + Math.Abs(p.y - q.y) + Math.Abs(p.z - q.z));
+                                return  Math.Max(Math.Abs(p.x - q.x) + Math.Abs(p.y - q.y) + Math.Abs(p.z - q.z));
                             }
                         </code></pre>
                     </section>
@@ -382,12 +393,12 @@
                             point \(q\) have coordinates \((q_1, q_2)\). Then the distance between them, \(d\), is given
                             by: $$d(p, q) = max(|p_1 - q_1|, |p_2 - q_2|) + (\sqrt{2} - 1) * min(|p_1 - q_1|, |p_2 -
                             q_2|)$$</p>
-                        <pre><code class="language-csharp">
+                        <pre class="language-csharp"><code>
                             //Pseudocode
                             //Points p and q are represented as Vector2 variables where (p1, p2) and (q1, q2) = (p.x, p.y) and (q.x, q.y) respectively.
                             public float Distance(Vector2 p, Vector2 q)
                             {
-                            return Math.Max(Math.Abs(p.x - q.x), Math.Abs(p.y - q.y)) + (Math.Sqrt(2) - 1) * Math.Min(Math.Abs(p.x - q.x), Math.Abs(p.y - q.y));
+                                return Math.Max(Math.Abs(p.x - q.x), Math.Abs(p.y - q.y)) + (Math.Sqrt(2) - 1) * Math.Min(Math.Abs(p.x - q.x), Math.Abs(p.y - q.y));
                             }
                         </code></pre>
                         <br>
@@ -413,7 +424,7 @@
                         <br>
                         <p>Then the distance between these points, \(d\), is given by: $$d(p, q) = (\sqrt{3} - \sqrt{2})
                             * dmin + (\sqrt{2} - 1) * dmid + dmax$$</p>
-                        <pre><code class="language-csharp">
+                        <pre class="language-csharp"><code>
                             //Pseudocode
                             //Points p and q are represented as Vector3 variables where (p1, p2, p3) and (q1, q2, q3) = (p.x, p.y, p.z)
                             public float Distance(Vector3 p, Vector3 q)
@@ -497,6 +508,7 @@
 
     <script src="javascript/navbar.js"></script>
     <script src="javascript/sidenavbar.js"></script>
+    <script src="javascript/copycodebutton.js"></script>
 </body>
 
 </html>

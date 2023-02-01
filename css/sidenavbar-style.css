@@ -4,15 +4,25 @@ html {
 }
 
 /* 2. Make nav sticky */
-main>nav {
+main > nav {
     position: sticky;
     top: 70.4px;
     align-self: start;
 
-    font-style: var(--merriweather-regular);
-    font-size: 20px;
+    font-family: var(--merriweather-regular);
+    font-size: 17px;
     height: 90vh;
     overflow-y: auto;
+}
+
+.nav-title {
+    font-size: 20px;
+    font-family: var(--merriweather-bold);
+    margin-bottom: 4px;
+}
+
+.nav-subtitle {
+    margin-left: 1rem;
 }
 
 main>nav::-webkit-scrollbar {
@@ -59,13 +69,13 @@ ol {
 }
 
 li {
-    margin-left: 1rem;
+    margin-left: 0;
 }
 
 /** page layout **/
 main {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 6fr;
     max-width: 100em;
     width: 98%;
     margin-left: auto;
