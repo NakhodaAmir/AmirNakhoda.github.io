@@ -2,12 +2,14 @@
 let blocks = document.querySelectorAll("pre");
 
 let placeholder = $('<i class="fa-solid fa-clone"></i>');
+$(placeholder).addClass("codesnippet-btnplaceholder");
 
 blocks.forEach((block) => {
 
     // only add button if browser supports Clipboard API
     if (navigator.clipboard) {
         let button = document.createElement("button");
+        $(button).addClass("codesnippet-btn");
 
         block.appendChild(button);
 
@@ -37,10 +39,11 @@ async function copyCode(block, button) {
     setTimeout(() => {
         button.innerHTML = '<i class="fa-regular fa-clone"></i>';
         placeholder = $('<i class="fa-solid fa-clone"></i>');
+        $(placeholder).addClass("codesnippet-btnplaceholder");
     }, 700);
 }
 
-$('pre[class*="language-"] button').hover(
+$('button.codesnippet-btn').hover(
     function(){
         if(placeholder == null) return;
         $(this).css("opacity", "0");   

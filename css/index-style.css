@@ -38,8 +38,10 @@ body .title-line {
     width: 25%;
     height: 220px;
     padding: 10px 10px;
+}
 
-
+.column:hover {
+    cursor:pointer;
 }
 
 /* Remove extra left and right margins, due to padding in columns */

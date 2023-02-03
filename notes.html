@@ -10,13 +10,6 @@
     <link rel="stylesheet" href="css/navbar-style.css">
     <link rel="stylesheet" href="css/sidenavbar-style.css">
     <link rel="stylesheet" href="css/notes-style.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css"
-        integrity="sha512-zcatBMvxa7rT7dDklfjauWsfiSFParF+hRfCdf4Zr40/MmA1gkFcBRbop0zMpvYF3FmznYFgcL8wlcuO/GwHoA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!--highlight code js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <!--Icons-->
     <script src="https://kit.fontawesome.com/6341b1be96.js" crossorigin="anonymous"></script>
     <!--Jquery-->
@@ -24,8 +17,6 @@
     <!--Math-->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <!--highlight code syntax function-->
-    <script>hljs.highlightAll();</script>
 
     <title>Notes</title>
 </head>
@@ -272,28 +263,14 @@
                             and \(q\)
                             are two points on the real line, then the distance between them,
                             \(d\), is given by: $$d(p, q) = |p - q|$$</p>
-                        <pre class="language-csharp"><code>
-                            //Pseudocode
-                            public float Distance(float p, float q)
-                            {
-                                return Math.Abs(p - q);
-                            }
-                        </code></pre>
-                        <br>
-                        <P><strong>2 Dimension</strong></P>
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FCodeSnippets%2Fblob%2Fmain%2FPhysical%2520Distance%2FEuclideanDistance1D.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>    
+                        <br>                    
                         <p>In the Euclidean plane, let point \(p\)
                             have Cartesian coordinates \((p_1, p_2)\)
                             and let point \(q\)
                             have coordinates \((q_1, q_2)\). Then the distance between them, \(d\), is given by: $$d(p,
                             q) = \sqrt{(q_1 - p_1)^2 + (q_2 - p_2)^2}$$</p>
-                        <pre  class="language-csharp"><code>
-                            //Pseudocode
-                            //Points p and q are represented as Vector2 variables where (p1, p2) and (q1, q2) = (p.x, p.y) and (q.x, q.y) respectively.
-                            public float Distance(Vector2 p, Vector2 q)
-                            {
-                                return  Math.Sqrt(((q.x - p.x) * (q.x - p.x) + (q.y - p.y) * (q.y - p.y)));
-                            }
-                        </code></pre>
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FCodeSnippets%2Fblob%2Fmain%2FPhysical%2520Distance%2FEuclideanDistance2D.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>
                         <br>
                         <P><strong>3 Dimension</strong></P>
                         <p>In the Euclidean plane, let point \(p\)
@@ -301,15 +278,7 @@
                             and let point \(q\)
                             have coordinates \((q_1, q_2, q_3)\). Then the distance between them, \(d\), is given by:
                             $$d(p, q) = \sqrt{(q_1 - p_1)^2 + (q_2 - p_2)^2 + (q_3 - p_3)^2}$$</p>
-                        <pre class="language-csharp"><code>
-                            //Pseudocode
-                            //Points p and q are represented as Vector3 variables where (p1, p2, p3) and (q1, q2, q3) = (p.x, p.y, p.z)
-                            //and (q.x, q.y, q.z) respectively.
-                            public float Distance(Vector3 p, Vector3 q)
-                            {
-                                return  Math.Sqrt(((q.x - p.x) * (q.x - p.x) + (q.y - p.y) * (q.y - p.y) + (q.z - p.z) * (q.z - p.z)));
-                            }
-                        </code></pre>
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FCodeSnippets%2Fblob%2Fmain%2FPhysical%2520Distance%2FManhattanDistance3D.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>
                     </section>
                     <br>
                     <br>
@@ -324,28 +293,13 @@
                         <p>In the Euclidean plane, let point \(p\) have Cartesian coordinates \((p_1, p_2)\) and let
                             point \(q\) have coordinates \((q_1, q_2)\). Then the distance between them, \(d\), is given
                             by: $$d(p, q) = |p_1 - q_1| + |p_2 - q_2|$$</p>
-                        <pre class="language-csharp"><code>
-                            //Pseudocode
-                            //Points p and q are represented as Vector2 variables where (p1, p2) and (q1, q2) = (p.x, p.y) and (q.x, q.y) respectively.
-                            public float Distance(Vector2 p, Vector2 q)
-                            {
-                                return  Math.Abs(p.x - q.x) + Math.Abs(p.y - q.y);
-                            }
-                        </code></pre>
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FCodeSnippets%2Fblob%2Fmain%2FPhysical%2520Distance%2FManhattanDistance2D.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>
                         <br>
                         <p><strong>3 Dimension</strong></p>
                         <p>In the Euclidean plane, let point \(p\) have Cartesian coordinates \((p_1, p_2, p_3)\) and
                             let point \(q\) have coordinates \((q_1, q_2, q_3)\). Then the distance between them, \(d\),
                             is given by: $$d(p, q) = |p_1 - q_1| + |p_2 - q_2| + |p_3 - q_3|$$</p>
-                        <pre class="language-csharp"><code>
-                            //Pseudocode
-                            //Points p and q are represented as Vector3 variables where (p1, p2, p3) and (q1, q2, q3) = (p.x, p.y, p.z)
-                            //and (q.x, q.y, q.z) respectively.
-                            public float Distance(Vector3 p, Vector3 q)
-                            {
-                                return  Math.Abs(p.x - q.x) + Math.Abs(p.y - q.y) + Math.Abs(p.z - q.z);
-                            }
-                        </code></pre>
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FCodeSnippets%2Fblob%2Fmain%2FPhysical%2520Distance%2FManhattanDistance3D.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>
                     </section>
                     <br>
                     <br>
@@ -359,27 +313,13 @@
                         <p>In the Euclidean plane, let point \(p\) have Cartesian coordinates \((p_1, p_2)\) and let
                             point \(q\) have coordinates \((q_1, q_2)\). Then the distance between them, \(d\), is given
                             by: $$d(p, q) = max(|p_1 - q_1|, |p_2 - q_2|)$$</p>
-                        <pre class="language-csharp"><code>
-                            //Points p and q are represented as Vector2 variables where (p1, p2) and (q1, q2) = (p.x, p.y) and (q.x, q.y) respectively.
-                            public float Distance(Vector2 p, Vector2 q)
-                            {
-                                return  Math.Max(Math.Abs(p.x - q.x), Math.Abs(p.y - q.y));
-                            }
-                        </code></pre>
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FCodeSnippets%2Fblob%2Fmain%2FPhysical%2520Distance%2FChebyshevDistance2D.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>
                         <br>
                         <p><strong>3 Dimension</strong></p>
                         <p>In the Euclidean plane, let point \(p\) have Cartesian coordinates \((p_1, p_2, p_3)\) and
                             let point \(q\) have coordinates \((q_1, q_2, q_3)\). Then the distance between them, \(d\),
                             is given by: $$d(p, q) = max(|p_1 - q_1|, |p_2 - q_2|, |p_3 - q_3|)$$</p>
-                        <pre class="language-csharp"><code>
-                            //Pseudocode
-                            //Points p and q are represented as Vector3 variables where (p1, p2, p3) and (q1, q2, q3) = (p.x, p.y, p.z)
-                            //and (q.x, q.y, q.z) respectively.
-                            public float Distance(Vector3 p, Vector3 q)
-                            {
-                                return  Math.Max(Math.Abs(p.x - q.x) + Math.Abs(p.y - q.y) + Math.Abs(p.z - q.z));
-                            }
-                        </code></pre>
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FCodeSnippets%2Fblob%2Fmain%2FPhysical%2520Distance%2FChebyshevDistance3D.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>
                     </section>
                     <br>
                     <br>
@@ -393,14 +333,7 @@
                             point \(q\) have coordinates \((q_1, q_2)\). Then the distance between them, \(d\), is given
                             by: $$d(p, q) = max(|p_1 - q_1|, |p_2 - q_2|) + (\sqrt{2} - 1) * min(|p_1 - q_1|, |p_2 -
                             q_2|)$$</p>
-                        <pre class="language-csharp"><code>
-                            //Pseudocode
-                            //Points p and q are represented as Vector2 variables where (p1, p2) and (q1, q2) = (p.x, p.y) and (q.x, q.y) respectively.
-                            public float Distance(Vector2 p, Vector2 q)
-                            {
-                                return Math.Max(Math.Abs(p.x - q.x), Math.Abs(p.y - q.y)) + (Math.Sqrt(2) - 1) * Math.Min(Math.Abs(p.x - q.x), Math.Abs(p.y - q.y));
-                            }
-                        </code></pre>
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FCodeSnippets%2Fblob%2Fmain%2FPhysical%2520Distance%2FOctileDistance.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>
                         <br>
                         <p>This formula can be generalized, as shown below, $$d(p, q) = max(|p_1 - q_1|, |p_2 - q_2|) +
                             (D - 1) * min(|p_1 - q_1|, |p_2 - q_2|)$$</p>
@@ -424,22 +357,7 @@
                         <br>
                         <p>Then the distance between these points, \(d\), is given by: $$d(p, q) = (\sqrt{3} - \sqrt{2})
                             * dmin + (\sqrt{2} - 1) * dmid + dmax$$</p>
-                        <pre class="language-csharp"><code>
-                            //Pseudocode
-                            //Points p and q are represented as Vector3 variables where (p1, p2, p3) and (q1, q2, q3) = (p.x, p.y, p.z)
-                            public float Distance(Vector3 p, Vector3 q)
-                            {
-                                float dX = x∆;
-                                float dY = y∆;
-                                float dZ = z∆;
-                                
-                                //Function sorts the 3 delta distances and returns dmin, dmid and dmax which are the minimum delta distance, 
-                                //middle delta distance and max delta distance respectively
-                                Sort3(dX, dY, dZ, out float dmin, out float dmid, out float dmax);
-
-                                return (Math.Sqrt(3) - Math.Sqrt(2)) * dmin + (Math.Sqrt(2) - 1) * dmid + dmax;
-                            }
-                        </code></pre>
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FCodeSnippets%2Fblob%2Fmain%2FPhysical%2520Distance%2FSexvigintileDistance.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>
                         <br>
                         <p>This formula can be generalized, as shown below, $$d(p, q) = (D_2 - D_1) * dmin + (D_1 - 1) *
                             dmid + dmax$$</p>
