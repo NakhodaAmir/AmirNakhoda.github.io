@@ -72,6 +72,14 @@ td {
     padding: 10px;
 }
 
+.notes-table {
+    width: 100%;
+}
+
+.notes-table tr:nth-child(even) td{
+    background-color: #3a3e43;
+}
+
 .videos {
     display: block;
     margin-left: auto;
