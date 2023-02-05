@@ -431,7 +431,7 @@
                 <br>
                 <section id="codesnip--cs">
                     <p class="third-title">C#</p>
-                    <p>Testing.</p>
+                    <p>C# related code snippets.</p>
                     <br>
                     <br>
                     <br>
@@ -446,8 +446,12 @@
                                 <th>Description</th>
                             </tr>
                             <tr>
-                                <td>test</td>
-                                <td>testing</td>
+                                <td>Id</td>
+                                <td>Stores the reference to the enumeration object's id.</td>
+                            </tr>
+                            <tr>
+                                <td>Name</td>
+                                <td>Stores the reference to the enumerations name.</td>
                             </tr>
                         </table>
                         <br>
@@ -458,8 +462,8 @@
                                 <th>Description</th>
                             </tr>
                             <tr>
-                                <td>test</td>
-                                <td>testing</td>
+                                <td>id</td>
+                                <td>Stores the reference to the latest enumeration object's id.</td>
                             </tr>
                         </table>
                         <br>
@@ -470,8 +474,28 @@
                                 <th>Description</th>
                             </tr>
                             <tr>
-                                <td>test</td>
-                                <td>testing</td>
+                                <td>string ToString()</td>
+                                <td>Returns the enumeration object's name.</td>
+                            </tr>
+                            <tr>
+                                <td>bool Equals(object obj)</td>
+                                <td>Returns true if another enumeration object equals to the this enumeration object, else false.</td>
+                            </tr>
+                            <tr>
+                                <td>int CompareTo(object obj)</td>
+                                <td>Compares another enumeration object's id against this enumeration object's id. 
+                                    <br>
+                                    <br>
+                                    If method returns less than 0, this instance precedes obj in the sort order.
+                                    <br>
+                                    If method returns 0, This instance occurs in the same position in the sort order as obj. 
+                                    <br>
+                                    If method returns greater than 0, This instance follows obj in the sort order.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>int GetHashCode()</td>
+                                <td>Returns the hash code for this enumeration object's id.</td>
                             </tr>
                         </table>
                         <br>
@@ -493,8 +517,16 @@
                                 <th>Description</th>
                             </tr>
                             <tr>
-                                <td>test</td>
-                                <td>testing</td>
+                                <td>Dictionary states</td>
+                                <td>Dictionary to store all the states of the finite state machine. Where an integer will be the key to its respective state.</td>
+                            </tr>
+                            <tr>
+                                <td>State currentState</td>
+                                <td>References the current state of the finite state machine.</td>
+                            </tr>
+                            <tr>
+                                <td>State previousState</td>
+                                <td>References the previous state the finite state machine left.</td>
                             </tr>
                         </table>
                         <br>
@@ -505,8 +537,36 @@
                                 <th>Description</th>
                             </tr>
                             <tr>
-                                <td>test</td>
-                                <td>testing</td>
+                                <td>void Add(int key, State state)</td>
+                                <td>Adds a state into the states dictionary with a respective integer key.</td>
+                            </tr>
+                            <tr>
+                                <td>State GetState(int key)</td>
+                                <td>Returns a state respective to whether the inputted interger is equal to the states key.</td>
+                            </tr>
+                            <tr>
+                                <td>State GetPreviousState()</td>
+                                <td>Returns previousState.</td>
+                            </tr>
+                            <tr>
+                                <td>void SetCurrentState(int key)</td>
+                                <td>Sets the current state of the finite state machine with the states respective key.</td>
+                            </tr>
+                            <tr>
+                                <td>void SetCurrentState(State state)</td>
+                                <td>Sets the current state of the finite state machine with the states.</td>
+                            </tr>
+                            <tr>
+                                <td>void Update()</td>
+                                <td>Update call for the finite state machine.</td>
+                            </tr>
+                            <tr>
+                                <td>void FixedUpdate()</td>
+                                <td>Fixed update call for the finite state machine.</td>
+                            </tr>
+                            <tr>
+                                <td>void LateUpdate()</td>
+                                <td>Late update call for the finite state machine.</td>
                             </tr>
                         </table>
                         <br>
@@ -520,8 +580,8 @@
                                 <th>Description</th>
                             </tr>
                             <tr>
-                                <td>test</td>
-                                <td>testing</td>
+                                <td>FiniteStateMachine fSM</td>
+                                <td>References the finite state machine.</td>
                             </tr>
                         </table>
                         <br>
@@ -532,8 +592,24 @@
                                 <th>Description</th>
                             </tr>
                             <tr>
-                                <td>test</td>
-                                <td>testing</td>
+                                <td>virtual void Enter()</td>
+                                <td>Method that will be called when the finite state machine enters the state.</td>
+                            </tr>
+                            <tr>
+                                <td>virtual void Exit()</td>
+                                <td>Method that will be called when the finite state machine exits the state.</td>
+                            </tr>
+                            <tr>
+                                <td>virtual void Update()</td>
+                                <td>Method that will be called during the finite state machine update loop.</td>
+                            </tr>
+                            <tr>
+                                <td>virtual void FixedUpdate()</td>
+                                <td>Method that will be called during the finite state machine fixed update loop.</td>
+                            </tr>
+                            <tr>
+                                <td>virtual void LateUpdate()</td>
+                                <td>Method that will be called during the finite state machine late update loop.</td>
                             </tr>
                         </table>
                         <br>
@@ -570,7 +646,7 @@
                 <br>
                 <section id="codesnip--unity">
                     <p class="third-title">Unity</p>
-                    <p>Testing.</p>
+                    <p>Unity related code snippets. Usually involving the use of Unity APIs.</p>
                     <br>
                     <br>
                     <br>

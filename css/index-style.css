@@ -92,6 +92,7 @@ body .title-line {
 
 .card-description a {
     z-index: 1;
+    position: relative;
 }
 
 .column:hover .card {
