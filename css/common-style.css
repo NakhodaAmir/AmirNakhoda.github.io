@@ -76,3 +76,10 @@ body {
 
     font-size: 100%;
 }
+
+.add-links::after {
+    content: attr(href);
+}
+.add-links {
+    color: var(--clickable-color);
+}

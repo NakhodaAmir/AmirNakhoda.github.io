@@ -85,7 +85,7 @@
                         </li>
                         <li class=""><a href="#codesnip--unity">Unity</a>
                             <ul class="nav-subtitle">
-                                <li class=""><a href="#codesnip--unity--umath">Static Math Class</a></li>
+                                <li class=""><a href="#codesnip--unity--deltaDistances">Delta Distances</a></li>
                                 <li class=""><a href="#codesnip--unity--singlelayermask">Single Layer Mask</a></li>
                             </ul>
                         </li>
@@ -185,6 +185,17 @@
                             lower bound of the running time of an algorithm, it is used for analyzing the average-case
                             complexity of an algorithm.</p>
                     </section>
+                    <br>
+                    <br>
+                    <br>
+                    <p class="fourth-title">References</p>
+                    <a class="add-links" href="https://www.programiz.com/dsa/asymptotic-notations#:~:text=Theta%20Notation%20(%CE%98%2Dnotation),case%20complexity%20of%20an%20algorithm"></a>    
+                    <br>
+                    <a class="add-links" href="https://www.tutorialspoint.com/data_structures_algorithms/asymptotic_analysis.htm#:~:text=Asymptotic%20analysis%20refers%20to%20computing,as%20g(n2)"></a>
+                    <br>
+                    <a class="add-links" href="https://www2.cs.arizona.edu/classes/cs345/summer14/files/bigO.pdf"></a>
+                    <br>
+                    <a class="add-links" href="https://www.geeksforgeeks.org/analysis-of-algorithems-little-o-and-little-omega-notations/"></a>
                 </section>
                 <br>
                 <br>
@@ -208,6 +219,13 @@
                         <li>Accounting method</li>
                         <li>Potential method</li>
                     </ul>
+                    <br>
+                    <br>
+                    <br>
+                    <p class="fourth-title">References</p>
+                    <a class="add-links" href="http://www2.hawaii.edu/~nodari/teaching/s16/notes/notes01.pdf"></a>
+                    <br>
+                    <a class="add-links" href="https://fdocuments.net/document/binary-heap-d-ary-heap-binomial-heap-amortized-analysis-amortized-complexity.html?page=19"></a>
                 </section>
                 <br>
                 <br>
@@ -370,6 +388,11 @@
                         <p>When \(D_2 = 3\) and \(D_1 = 2\), the formula will turn into the Manhattan distance.</p>
                         <br>
                         <p>Sexvigintile distance is when \(D_2 = \sqrt3\) and \(D_1 = \sqrt2\)</p>
+                        <br>
+                        <br>
+                        <br>
+                        <p class="fourth-title">References</p>
+                    <a class="add-links" href="https://webdocs.cs.ualberta.ca/~nathanst/papers/voxels.pdf"></a>
                     </section>
                     <br>
                     <br>
@@ -650,16 +673,78 @@
                     <br>
                     <br>
                     <br>
-                    <section id="codesnip--unity--umath">
-                        <p class="fourth-title">Static Math Class</p>
-                        <p>Testing.</p>
+                    <section id="codesnip--unity--deltaDistances">
+                        <p class="fourth-title">DeltaDistances</p>
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FCodeSnippets%2Fblob%2Fmain%2FUnity%2520Snippets%2FDeltaDistance.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>
+                        <br>
+                        <p><strong>Static Methods</strong></p>
+                        <table class="notes-table">
+                            <tr>
+                                <th>Methods</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>private static void DeltaDistance2D(Vector2 nodeA, Vector2 nodeB, out float dX, out float dY)</td>
+                                <td>Returns the difference of the the x position and y position between two 2D points.</td>
+                            </tr>
+                            <tr>
+                                <td>private static void DeltaDistance3D(Vector2 nodeA, Vector2 nodeB, out float dX, out float dY)</td>
+                                <td>Returns the difference of the the x position, y position and z position between two 3D points.</td>
+                            </tr>
+                        </table>
                     </section>
                     <br>
                     <br>
                     <br>
                     <section id="codesnip--unity--singlelayermask">
                         <p class="fourth-title">Single Layer Mask</p>
-                        <p>Testing.</p>
+                        <p>Similar to a LayerMask in Unity, the Single Layer Mask only allows the user to select one LayerMask.</p>
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FCodeSnippets%2Fblob%2Fmain%2FUnity%2520Snippets%2FSingleLayerMask.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>
+                        <br>
+                        <p><strong>Properties</strong></p>
+                        <table class="notes-table">
+                            <tr>
+                                <th>Properties</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>LayerIndex</td>
+                                <td>Returns the layerIndex variable.</td>
+                            </tr>
+                            <tr>
+                                <td>Value</td>
+                                <td>Returns the interger value of the layer.</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <p><strong>Variables</strong></p>
+                        <table class="notes-table">
+                            <tr>
+                                <th>Variables</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>layerIndex</td>
+                                <td>Stores the index of the layer: The position of the layer represented in the layers section in the Unity Editor.</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <p><strong>Public Methods</strong></p>
+                        <table class="notes-table">
+                            <tr>
+                                <th>Methods</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>public void Set(int layerIndex)</td>
+                                <td>Sets the value of this SingleLayerMask object to the value stated by the parameter, refering to the position of the layer represented in the layers section in the Unity Editor.</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <p>Example Usage</p>
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FCodeSnippets%2Fblob%2Fmain%2FUnity%2520Snippets%2FExamples%2FSingleLayerMaskExample.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>
+                        <br>
+                        <img src="images/SingleLayerMaskExample.gif">
                     </section>
                 </section>
             </section>

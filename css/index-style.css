@@ -133,7 +133,7 @@ body .title-line {
 .column:hover #notes-dsag {
     transition-delay: 1s;
     height: 350.8px;
-    /*add 20*/
+    /*add 62*/
 }
 
 #notes-mformula {
@@ -144,7 +144,7 @@ body .title-line {
 .column:hover #notes-mformula {
     transition-delay: 1s;
     height: 306px;
-    /*add 20*/
+    /*add 62*/
 }
 
 #notes-code {
@@ -154,8 +154,8 @@ body .title-line {
 
 .column:hover #notes-code {
     transition-delay: 1s;
-    height: 261.2px;
-    /*add 20*/
+    height: 306px;
+    /*add 62*/
 }
 
 
