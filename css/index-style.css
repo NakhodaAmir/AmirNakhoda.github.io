@@ -96,6 +96,8 @@ body .title-line {
 }
 
 .column:hover .card {
+    position: relative;
+
     transition-delay: 1s;
 
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.9);
@@ -150,6 +152,17 @@ body .title-line {
 #notes-code {
     height: 200px;
     transition: height 0.2s ease-in-out;
+}
+
+#prj-prtyq {
+    height: 200px;
+    transition: height 0.2s ease-in-out;
+}
+
+.column:hover #prj-prtyq {
+    transition-delay: 1s;
+    height: 283.6px
+    /*add 62**/
 }
 
 .column:hover #notes-code {
