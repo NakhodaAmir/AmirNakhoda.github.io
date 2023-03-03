@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/common-style.css">
     <link rel="stylesheet" href="css/navbar-style.css">
     <link rel="stylesheet" href="css/sidenavbar-style.css">
-    <link rel="stylesheet" href="css/notes-style.css">
+    <link rel="stylesheet" href="css/content-style.css">
     <!--Icons-->
     <script src="https://kit.fontawesome.com/6341b1be96.js" crossorigin="anonymous"></script>
     <!--Jquery-->
@@ -28,7 +28,9 @@
         <nav class="section-nav">
             <ol>
                 <li><a class="nav-title" href="#tablecontents">Table of Contents</a></li>
-                <br>
+            </ol>
+            <br>
+            <ol>
                 <li><a href="#dsag" class="nav-title">Data Strcuture & Algorithms</a>
                     <ul>
                         <li class=""><a href="#dsag--asymptoticanalysis">Asymptotic Analysis</a>
@@ -93,7 +95,7 @@
                 </li>
             </ol>
         </nav>
-        <div id="notes-content">
+        <div id="content">
             <section id="tablecontents">
                 <p id="title"><i class="fa-regular fa-clipboard">
                 </i>Notes</p>
@@ -189,13 +191,13 @@
                     <br>
                     <br>
                     <p class="fourth-title">References</p>
-                    <a class="add-links" href="https://www.programiz.com/dsa/asymptotic-notations#:~:text=Theta%20Notation%20(%CE%98%2Dnotation),case%20complexity%20of%20an%20algorithm"></a>    
+                    <a target="_blank" class="add-links" href="https://www.programiz.com/dsa/asymptotic-notations#:~:text=Theta%20Notation%20(%CE%98%2Dnotation),case%20complexity%20of%20an%20algorithm"></a>    
                     <br>
-                    <a class="add-links" href="https://www.tutorialspoint.com/data_structures_algorithms/asymptotic_analysis.htm#:~:text=Asymptotic%20analysis%20refers%20to%20computing,as%20g(n2)"></a>
+                    <a target="_blank" class="add-links" href="https://www.tutorialspoint.com/data_structures_algorithms/asymptotic_analysis.htm#:~:text=Asymptotic%20analysis%20refers%20to%20computing,as%20g(n2)"></a>
                     <br>
-                    <a class="add-links" href="https://www2.cs.arizona.edu/classes/cs345/summer14/files/bigO.pdf"></a>
+                    <a target="_blank" class="add-links" href="https://www2.cs.arizona.edu/classes/cs345/summer14/files/bigO.pdf"></a>
                     <br>
-                    <a class="add-links" href="https://www.geeksforgeeks.org/analysis-of-algorithems-little-o-and-little-omega-notations/"></a>
+                    <a target="_blank" class="add-links" href="https://www.geeksforgeeks.org/analysis-of-algorithems-little-o-and-little-omega-notations/"></a>
                 </section>
                 <br>
                 <br>
@@ -213,6 +215,10 @@
                     <p>Amortized analysis differs from average-case analysis in that probability is not involved; an
                         amortized analysis guarantees the average performance of each operation in the worst case.</p>
                     <br>
+                    <p>“Amortized” time means that the time complexity is considered over a typical series of operations, rather than the each operation individually.</p>
+                    <br>
+                    <p><i>"For example: Finding the mth smallest number in a list of n numbers is O(n), and sorting a list of n numbers is O(n log n). However if you are going to find the mth smallest number lots of times on the same list, you can sort the list, and then look up the answer instantly as many times as you want. The lookup is O(1), and the sorting is amortized over all the lookups, since we only have to do it once. The amortized time to look up the mth smallest number is really O(1), which gives a better analysis of the actual practical complexity of the problem."</i><a class="clickable-text" href="https://www.quora.com/What-is-the-relationship-between-amortized-run-time-and-big-%CE%98-run-time" target="_blank"> ~ Quora</a></p>
+                    <br>
                     <p>There are three main types of amortized analysis:</p>
                     <ul>
                         <li>Aggregate analysis</li>
@@ -223,9 +229,9 @@
                     <br>
                     <br>
                     <p class="fourth-title">References</p>
-                    <a class="add-links" href="http://www2.hawaii.edu/~nodari/teaching/s16/notes/notes01.pdf"></a>
+                    <a class="add-links" href="http://www2.hawaii.edu/~nodari/teaching/s16/notes/notes01.pdf" target="_blank"></a>
                     <br>
-                    <a class="add-links" href="https://fdocuments.net/document/binary-heap-d-ary-heap-binomial-heap-amortized-analysis-amortized-complexity.html?page=19"></a>
+                    <a target="_blank" class="add-links" href="https://fdocuments.net/document/binary-heap-d-ary-heap-binomial-heap-amortized-analysis-amortized-complexity.html?page=19"></a>
                 </section>
                 <br>
                 <br>
@@ -392,7 +398,7 @@
                         <br>
                         <br>
                         <p class="fourth-title">References</p>
-                    <a class="add-links" href="https://webdocs.cs.ualberta.ca/~nathanst/papers/voxels.pdf"></a>
+                    <a class="add-links" href="https://webdocs.cs.ualberta.ca/~nathanst/papers/voxels.pdf" target="_blank"></a>
                     </section>
                     <br>
                     <br>

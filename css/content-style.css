@@ -1,10 +1,9 @@
-#notes-content {
-    border-left: 5px solid var(--topnav-background-color);
-    padding-left: 63px;
-    padding-right: 63px;
+#content {
+    padding-left: 25px;
+    padding-right: 9.8px;
 }
 
-#notes-content section {
+#content section {
     scroll-margin-top: 60.4px;
 }
 
@@ -67,13 +66,9 @@ img {
 table,
 th,
 td {
-    border: 1px solid #d4d4d4;
+    border: 1px solid #717171;
     border-collapse: collapse;
     padding: 10px;
-}
-
-.notes-table {
-    width: 100%;
 }
 
 .notes-table tr:nth-child(even) td{
@@ -130,4 +125,7 @@ td {
 .codesnippet-btnplaceholder {
     z-index: 0;
 }
-
+.clickable-text {
+    text-decoration: none;
+    color: var(--clickable-color);
+}

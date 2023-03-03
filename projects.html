@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="css/common-style.css">
     <link rel="stylesheet" href="css/navbar-style.css">
     <link rel="stylesheet" href="css/sidenavbar-style.css">
-    <link rel="stylesheet" href="css/projects-style.css">
+    <link rel="stylesheet" href="css/content-style.css">
     <!--Icons-->
     <script src="https://kit.fontawesome.com/6341b1be96.js" crossorigin="anonymous"></script>
     <!--Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <!--Repo.js-->
-    <script src="javascript/repo.min.js"></script>
+    <!--Math-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <title>Projects</title>
 </head>
@@ -23,15 +24,148 @@
 <body>
     <div id="navbar-placeholder"></div>
 
-    <div id="repo"></div>
+    <main>
+        <nav class="section-nav">
+            <ol>
+                <li><a class="nav-title" href="#tablecontents">Table of Contents</a></li>
+            </ol>
+            <br>
+            <ol>
+                <li><a href="#csharp" class="nav-title">C#</a>
+                    <ul>
+                        <li class=""><a href="#csharp--priorityqueues">Priority Queues</a>
+                            <ul class="nav-subtitle">
+                                <li class=""><a href="#csharp--priorityqueues--daryheap">D-ary Heap</a></li>
+                                <li class=""><a href="#csharp--priorityqueues--pairingheap">Pairing Heap</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            <br>
+            <ol>
+                <li><a href="#unity" class="nav-title">Unity</a>
 
-    <script>
-        $(function() {
-            $('body').repo({ user: 'NakhodaAmir', name: 'PriorityQueues'})
-        });
-    </script>
+                </li>
+            </ol>
+        </nav>
+        <div id="content">
+            <section id="tablecontents">
+                <p id="title"><i class="fa-solid fa-code"></i>Projects</p>
+            </section>
+            <br>
+            <br>
+            <hr class="content-line">
+            <br>
+            <br>
+            <section id="csharp">
+                <p class="second-title">C# Projects</p>
+                <br>
+                <section id="csharp--priorityqueues">
+                    <p class="third-title">Priority Queues</p>
+                    <p>A <strong>priority queue</strong> is a type of queue that arranges elements based on their priority values. Elements with higher priority values are typically retrieved before elements with lower priority values.</p>
+                    <br>
+                    <p><strong>Time Complexity Overview</strong></p>
+                    <table class="notes-table">
+                        <tr>
+                            <th>Operation</th>
+                            <th>Pairing Heap</th>
+                            <th>D-ary Heap</th>
+                        </tr>
+                        <tr>
+                            <td>Count</td>
+                            <td>\(Θ\)(1)</td>
+                            <td>\(Θ\)(1)</td>
+                        </tr>
+                        <tr>
+                            <td>Peek</td>
+                            <td>\(Θ\)(1)</td>
+                            <td>\(Θ\)(1)</td>
+                        </tr>
+                        <tr>
+                            <td>IsEmpty</td>
+                            <td>\(Θ\)(1)</td>
+                            <td>\(Θ\)(1)</td>
+                        </tr>
+                        <tr>
+                            <td>Insert</td>
+                            <td>\(Θ\)(1)</td>
+                            <td>\(Θ\)(\(log_d\)n)</td>
+                        </tr>
+                        <tr>
+                            <td>Extract Min</td>
+                            <td>\(O\)(n)<sup><a class="clickable-text" href="#sup0">0</a></sup> <br> \(O\)(\(log\)n)<sup><a class="clickable-text" href="#sup1">1</a></sup></td>
+                            <td>\(Θ\)(\(dlog_d\)n)</td>
+                        </tr>
+                        <tr>
+                            <td>Contains</td>
+                            <td>\(Θ\)(1)</td>
+                            <td>\(Θ\)(1)</td>
+                        </tr>
+                        <tr>
+                            <td>Update</td>
+                            <td>\(O\)(1)<sup><a class="clickable-text" href="#sup0">0</a></sup> <br> \(o\)(\(log\)n)<sup><a class="clickable-text" href="#sup1">1</a> <a class="clickable-text" href="#sup2">2</a></sup></td>
+                            <td>\(Θ\)(\(log_d\)n)</td>
+                        </tr>
+                        <tr>
+                            <td>Meld</td>
+                            <td>\(Θ\)(1)</td>
+                            <td>Nil</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <p id="sup0">0: Actual Time</p>
+                    <p id="sup1">1: Amortized Time</p>
+                    <p id="sup2">2: Lower bound of \(Ω\)(\(loglog\)n). Upper bound \(O\)(\(2^{2\sqrt{loglog n}}\))</p>
+                    <br>
+                    <br>
+                    <br>
+                    <section id="csharp--priorityqueues--daryheap">
+                        <p class="fourth-title">D-ary Heap</p>
+                        <p>A generalization of the binary heap in which the nodes have d children instead of 2.</p>
+                        <br>
+                        <p><i>"This data structure allows decrease priority operations to be performed more quickly than binary heaps, at the expense of slower delete minimum operations. This tradeoff leads to better running times for algorithms such as Dijkstra's algorithm in which decrease priority operations are more common than delete min operations. Additionally, d-ary heaps have better memory cache behavior than binary heaps, allowing them to run more quickly in practice despite having a theoretically larger worst-case running time. Like binary heaps, d-ary heaps are an in-place data structure that uses no additional storage beyond that needed to store the array of items in the heap."</i><a target="_blank" class="clickable-text" href="https://en.wikipedia.org/wiki/D-ary_heap"> ~ Wikipidea</a></p>
+                        <br>
+                        <p style="text-align: center;"><strong>Binary Heap</strong></p>
+                        <img src="images/binaryheap.png">
+                        <br>
+                        <p style="text-align: center;"><strong>Ternary Heap</strong></p>
+                        <img src="images/ternaryheap.png">
+                        <br>
+                        <p style="text-align: center;"><strong>Quaternary Heap</strong></p>
+                        <img src="images/quaternaryheap.png">
+                    </section>
+                    <br>
+                    <br>
+                    <br>
+                    <section id="csharp--priorityqueues--pairingheap">
+                        <p class="fourth-title">Pairing Heap</p>
+                        <p>Pairing heaps are heap-ordered multiway tree structures, and can be considered simplified Fibonacci heaps. Pairing heaps are a type of self-adjusting binomial heap. Self-adjusting structures rearrange themselves when operations happen to remain balanced.</p>
+                        <br>
+                        <p>Pairing heaps maintain a min-heap property that all parent nodes always have a smaller value than their children (and maintains the max-heap property if the pairing heap is a max heap).</p>
+                        <img src="images/pairingheap.png">
+                        <br>
+                        <p>Each node keeps track of the following information​: a pointer to its leftmost child node and pointers to its sibling nodes. The pointers in the pairing heap shown above look like this.</p>
+                        <br>
+                        <img src="images/pairingheappointers.png">
+                    </section>
+                </section>
+            </section>
+            <br>
+            <br>
+            <hr class="content-line">
+            <br>
+            <br>
+            <section id="unity">
+                <p class="second-title">Unity Projects</p>
+                <br>
+            </section>
+        </div>
+    </main>
+    
     <script src="javascript/navbar.js"></script>
     <script src="javascript/sidenavbar.js"></script>
+    <script src="javascript/copycodebutton.js"></script>
 </body>
 
 </html>
