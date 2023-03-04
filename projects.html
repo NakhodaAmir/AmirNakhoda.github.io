@@ -62,10 +62,17 @@
                 <p class="second-title">C# Projects</p>
                 <br>
                 <section id="csharp--priorityqueues">
-                    <p class="third-title">Priority Queues</p>
+                    <p class="third-title">Priority Queues <sup id="github-icon"><a href="https://github.com/NakhodaAmir/PriorityQueues" target="_blank"><i class="fa-brands fa-github"></i></a></sup></p>
                     <p>A <strong>priority queue</strong> is a type of queue that arranges elements based on their priority values. Elements with higher priority values are typically retrieved before elements with lower priority values.</p>
                     <br>
                     <p><strong>Time Complexity Overview</strong></p>
+                    <table class="notes-table">
+                        <tr>
+                            <th>n</th>
+                            <th>Total number of elements in the heap</th>
+                        </tr>
+                    </table>
+                    <br>
                     <table class="notes-table">
                         <tr>
                             <th>Operation</th>
@@ -126,14 +133,12 @@
                         <br>
                         <p><i>"This data structure allows decrease priority operations to be performed more quickly than binary heaps, at the expense of slower delete minimum operations. This tradeoff leads to better running times for algorithms such as Dijkstra's algorithm in which decrease priority operations are more common than delete min operations. Additionally, d-ary heaps have better memory cache behavior than binary heaps, allowing them to run more quickly in practice despite having a theoretically larger worst-case running time. Like binary heaps, d-ary heaps are an in-place data structure that uses no additional storage beyond that needed to store the array of items in the heap."</i><a target="_blank" class="clickable-text" href="https://en.wikipedia.org/wiki/D-ary_heap"> ~ Wikipidea</a></p>
                         <br>
-                        <p style="text-align: center;"><strong>Binary Heap</strong></p>
-                        <img src="images/binaryheap.png">
+                        <img class="inline-img" src="images/binaryheap.png">
+                        <img src="images/ternaryheap.png" width="100%">
+                        <img src="images/quaternaryheap.png" width="100%">
                         <br>
-                        <p style="text-align: center;"><strong>Ternary Heap</strong></p>
-                        <img src="images/ternaryheap.png">
-                        <br>
-                        <p style="text-align: center;"><strong>Quaternary Heap</strong></p>
-                        <img src="images/quaternaryheap.png">
+                        <p><strong>D-ary Heap</strong></p>
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FPriorityQueues%2Fblob%2Fmain%2FD-Ary%2520Heap%2FDAryHeap.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>
                     </section>
                     <br>
                     <br>
@@ -162,7 +167,6 @@
             </section>
         </div>
     </main>
-    
     <script src="javascript/navbar.js"></script>
     <script src="javascript/sidenavbar.js"></script>
     <script src="javascript/copycodebutton.js"></script>

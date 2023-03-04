@@ -63,6 +63,12 @@ img {
     width: 50%;
 }
 
+.inline-img {
+    position: relative;
+    float: left;
+    height: 430.63px;
+}
+
 table,
 th,
 td {
@@ -128,4 +134,8 @@ td {
 .clickable-text {
     text-decoration: none;
     color: var(--clickable-color);
+}
+
+#github-icon {
+    font-size: 20px;
 }
