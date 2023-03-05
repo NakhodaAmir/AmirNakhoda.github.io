@@ -17,11 +17,17 @@
     <!--Math-->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!--Page Loader-->
+    <script src="javascript/pageloader.js"></script>
 
     <title>Projects</title>
 </head>
 
 <body>
+    <div class="loader">
+        <div></div>
+    </div>
+
     <div id="navbar-placeholder"></div>
 
     <main>
@@ -80,42 +86,74 @@
                             <th>D-ary Heap</th>
                         </tr>
                         <tr>
-                            <td>Count</td>
+                            <td>
+                                <div class="tooltip tooltip-top">Count
+                                    <span class="tooltiptext">Returns the number of elements in the heap</span>
+                                </div>
+                            </td>
                             <td>\(Θ\)(1)</td>
                             <td>\(Θ\)(1)</td>
                         </tr>
                         <tr>
-                            <td>Peek</td>
+                            <td>
+                                <div class="tooltip tooltip-top">Peek
+                                    <span class="tooltiptext">Returns the smallest element in a Min-Heap or the largest element in a Max-Heap</span>
+                                </div>
+                            </td>
                             <td>\(Θ\)(1)</td>
                             <td>\(Θ\)(1)</td>
                         </tr>
                         <tr>
-                            <td>IsEmpty</td>
+                            <td>
+                                <div class="tooltip tooltip-top">IsEmpty
+                                    <span class="tooltiptext">Returns whether the heap is empty or not</span>
+                                </div>
+                            </td>
                             <td>\(Θ\)(1)</td>
                             <td>\(Θ\)(1)</td>
                         </tr>
                         <tr>
-                            <td>Insert</td>
+                            <td>
+                                <div class="tooltip tooltip-top">Insert
+                                    <span class="tooltiptext">Inserts and element into the heap</span>
+                                </div>
+                            </td>
                             <td>\(Θ\)(1)</td>
                             <td>\(Θ\)(\(log_d\)n)</td>
                         </tr>
                         <tr>
-                            <td>Extract Min</td>
+                            <td>
+                                <div class="tooltip tooltip-top">Extract Min
+                                    <span class="tooltiptext">Removes and returns the smallest element in a Min-Heap or the largest element in a Max-Heap</span>
+                                </div>
+                            </td>
                             <td>\(O\)(n)<sup><a class="clickable-text" href="#sup0">0</a></sup> <br> \(O\)(\(log\)n)<sup><a class="clickable-text" href="#sup1">1</a></sup></td>
                             <td>\(Θ\)(\(dlog_d\)n)</td>
                         </tr>
                         <tr>
-                            <td>Contains</td>
+                            <td>
+                                <div class="tooltip tooltip-top">Contains
+                                    <span class="tooltiptext">Returns whether the heap contains an element or not</span>
+                                </div>
+                            </td>
                             <td>\(Θ\)(1)</td>
                             <td>\(Θ\)(1)</td>
                         </tr>
                         <tr>
-                            <td>Update</td>
+                            <td>
+                                <div class="tooltip tooltip-top">Update
+                                    <span class="tooltiptext">Updates an element in the heap</span>
+                                </div>
+                            </td>
                             <td>\(O\)(1)<sup><a class="clickable-text" href="#sup0">0</a></sup> <br> \(o\)(\(log\)n)<sup><a class="clickable-text" href="#sup1">1</a> <a class="clickable-text" href="#sup2">2</a></sup></td>
                             <td>\(Θ\)(\(log_d\)n)</td>
                         </tr>
                         <tr>
-                            <td>Meld</td>
+                            <td>
+                                <div class="tooltip tooltip-top">Meld
+                                    <span class="tooltiptext">Melds two heaps into one heap</span>
+                                </div>
+                            </td>
                             <td>\(Θ\)(1)</td>
                             <td>Nil</td>
                         </tr>
@@ -139,6 +177,8 @@
                         <br>
                         <p><strong>D-ary Heap</strong></p>
                         <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FPriorityQueues%2Fblob%2Fmain%2FD-Ary%2520Heap%2FDAryHeap.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>
+                        <p><strong>Example Usage</strong></p>
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FPriorityQueues%2Fblob%2Fmain%2FD-Ary%2520Heap%2FDAryHeapExample.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>
                     </section>
                     <br>
                     <br>
@@ -153,6 +193,11 @@
                         <p>Each node keeps track of the following information​: a pointer to its leftmost child node and pointers to its sibling nodes. The pointers in the pairing heap shown above look like this.</p>
                         <br>
                         <img src="images/pairingheappointers.png">
+                        <br>
+                        <p><strong>Pairing Heap</strong></p>
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FPriorityQueues%2Fblob%2Fmain%2FPairing%2520Heap%2FPairingHeap.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>
+                        <p><strong>Example Usage</strong></p>
+                        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FNakhodaAmir%2FPriorityQueues%2Fblob%2Fmain%2FPairing%2520Heap%2FPairingHeapExample.cs&style=github-dark-dimmed&type=code&showFileMeta=on&showFullPath=on"></script>
                     </section>
                 </section>
             </section>
@@ -167,6 +212,7 @@
             </section>
         </div>
     </main>
+
     <script src="javascript/navbar.js"></script>
     <script src="javascript/sidenavbar.js"></script>
     <script src="javascript/copycodebutton.js"></script>
