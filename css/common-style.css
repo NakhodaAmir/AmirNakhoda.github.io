@@ -188,3 +188,17 @@ body {
         transform: rotate(360deg);
     }
 }
+
+.github-icon a{
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.github-icon:hover a{ 
+  color: #fff;
+}
+
+.github-icon:hover a i{ 
+  color: #fff;
+}

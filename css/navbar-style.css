@@ -32,3 +32,7 @@
 #navbar-placeholder {
     height: 60.4px;
 }
+
+.icon-bar div i:hover {
+    color: #ffffff;
+}
